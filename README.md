@@ -1,6 +1,5 @@
 # Bachelor of Computer Science
-## Computer Systems Option
-### Oregon State University
+## Computer Systems Option - Oregon State University
 
 This is a collection of assignments and labs from my tenure at OSU. I have collected these into one repository for my own ease of access after graduation. It also serves as a catalogue for me to show off works and progress over 4 years of college.
 
