@@ -1,0 +1,16 @@
+[
+  {
+    "workout_plan": {
+      "Mon": [
+        {
+          "name": "bench-press",
+          "reps": 5,
+          "sets": 5,
+          "rest_time": 3,
+          "video_id": "https://youtu.be/wzq57DB5Ppg?si=VDtNU_05aODeBA86",
+          "muscle_group": "chest"
+        }
+      ]
+    }
+  }
+]
