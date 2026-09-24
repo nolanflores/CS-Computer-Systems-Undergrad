@@ -1,0 +1,82 @@
+# Loading project DesignProject1
+# Compile of VendingMachine.sv was successful.
+# Load canceled
+vsim work.VendingMachine
+# vsim work.VendingMachine 
+# Start time: 18:15:54 on May 26,2025
+# Loading sv_std.std
+# Loading work.VendingMachine
+do ./nickelOnly.do
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** UI-Msg (suppressible): (vsim-4008) Object 'sim:/VendingMachineTop/clk' not found.
+# Error in macro ././nickelOnly.do line 16
+# ** UI-Msg (suppressible): (vsim-4008) Object 'sim:/VendingMachineTop/clk' not found.
+# 
+#     while executing
+# "force sim:/VendingMachineTop/clk 0 0, 1 500ms -repeat 1000ms"
+do ./nickelOnly.do
+# ** UI-Msg (suppressible): (vsim-4008) Object 'sim:/VendingMachineTop/clk' not found.
+# Error in macro ././nickelOnly.do line 16
+# ** UI-Msg (suppressible): (vsim-4008) Object 'sim:/VendingMachineTop/clk' not found.
+# 
+#     while executing
+# "force sim:/VendingMachineTop/clk 0 0, 1 500ms -repeat 1000ms"
+add wabe *
+# ** Error: bad option "wabe": should be one of...
+#   add atv ?options? ?arg arg ...?
+#   add button text action ?disable? ?options? ?help?
+#   add dataflow ?options? ?arg arg ...?
+#   add lists ?options? ?arg arg ...?
+#   add log ?options? ?arg arg ...?
+#   add memory options ?arg arg ...?
+#   add message ?options? ?arg arg ...?
+#   add monitor ?options? ?arg arg ...?
+#   add schematic ?options? ?arg arg ...?
+#   add testbrowser ?options? ?arg arg ...?
+#   add virtual ?options? ?arg arg ...?
+#   add watch ?options? ?arg arg ...?
+#   add wave ?options? ?arg arg ...?
+add wave *
+add wave *
+restart -f
+# Break key hit
+quit -sim
+# End time: 18:17:10 on May 26,2025, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 1
+vsim work.VendingMachine
+# vsim work.VendingMachine 
+# Start time: 18:17:24 on May 26,2025
+# Loading sv_std.std
+# Loading work.VendingMachine
+add wave *
+quit -sim
+# End time: 18:18:46 on May 26,2025, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 1
+# Compile of VendingMachineTop.sv was successful.
+vsim work.VendingMachineTop
+# vsim work.VendingMachineTop 
+# Start time: 18:21:21 on May 26,2025
+# Loading sv_std.std
+# Loading work.VendingMachineTop
+add wave *
+do ./nickelOnly.do
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position insertpoint  \
+sim:/VendingMachineTop/money
+add wave -position insertpoint  \
+sim:/VendingMachineTop/refundEnable
+quit -sim
+# End time: 18:25:13 on May 26,2025, Elapsed time: 0:03:52
+# Errors: 0, Warnings: 1
+# Compile of VendingMachineTop.sv was successful.
+vsim work.VendingMachineTop
+# vsim work.VendingMachineTop 
+# Start time: 18:26:56 on May 26,2025
+# Loading sv_std.std
+# Loading work.VendingMachineTop
+do ./nickelOnly.do
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position insertpoint  \
+sim:/VendingMachineTop/money
+# End time: 13:56:02 on May 27,2025, Elapsed time: 19:29:06
+# Errors: 0, Warnings: 1

@@ -1,0 +1,129 @@
+/*
+ * ECE 272 Lab 3b
+ * Seven Segment Testbench Skeleton File
+ *
+ * Adapted from Harris & Harris "Digital Design and Computer Achitecture"
+ * Example 4.38 "Self-Checking Testbench" (Page 215)
+ *
+ * Author(s): Quinn Yockey
+ * Last Modified: 21 February 2025
+ */
+
+/* IMPORTANT!  Read the comments carefully.  They are included to help you! */
+
+/*
+ * Instructions:
+ *     1. Open the course textbook.  This file is based on Example 4.38,
+ *        which will help you complete this exercise.
+ *     2. Tasks are marked with a number in brackets (e.g., [1]). Each has a
+ *        corresponding TODO comment to replace with SystemVerilog code.
+ */
+
+module SevenSegmentTestbench();
+
+    /*
+     * Create signals to connect to the SevenSegmentDecode module:
+     *
+     * - `digitTest`: Drives the `digit` input in SevenSegmentDecode.
+     * - `segmentsMeasured`: Captures the `segments` output of SevenSegmentDecode.
+     *
+     * [1] Define the width of the `segmentsMeasured` signal.  Match the width
+     *     of the `segments` output from SevenSegmentDecode.
+     */
+    logic [3:0] digitTest; // Input digit to test
+    logic [/* [1] TODO */] segmentsMeasured; // Output measured in simulation
+
+    /*
+     * Create instance of the device under test (DUT): SevenSegmentDecode.
+     *
+     * The `digitTest` signal is connected to the DUT `digit` input.  This
+     * allows the testbench to control the `digit` value in SevenSegmentDecode
+     * by changing the value of `digitTest`.
+     *
+     * A signal can be connected to a module input or output port by specifying
+     * the module port (ex: `digit`) and then stating the connected signal
+     * (ex: `digitTest`) in parenthesis. Note that the syntax used here differs
+     * from syntax used in the textbook.
+     *
+     * [2] Connect `segmentsMeasured` to `segments` output. This allows the
+     *     testbench to read the `segments` value of SevenSegmentDecode by
+     *     checking the `segmentsMeasured` signal.
+     *
+     * Note: For those who have taken CS classes, the syntax is similar to
+     *       passing arguments in a function call.
+     */
+    SevenSegmentDecode dut(
+        .digit(digitTest),
+        /* [2] TODO */
+    );
+
+    /*
+     * Testbench Overview:
+     *
+     * A testbench operates through a series of tests.  The idea is to validate
+     * that for a given input, a module yields the correct output.
+     *
+     * In this case, the testbench will check each 4-bit number from 0x0 to 0xF
+     * and confirm that SevenSegmentDecode module outputs the correct signals to
+     * light up the 7-segment display.
+     *
+     * Each test has the following structure:
+     *     [3] Assign a test value to `digitTest`.
+     *     [4] Delay for 10 ps to allow the output to update.
+     *     [5] Compare `segmentsMeasured` to the expected value of `segments`.
+     *         This expected value should be hard-coded into the program.
+     *     [6] Print an error message if the output is incorrect.
+     *
+     * Execute this process for all possible inputs 0x0 though 0xF.
+     */
+
+    // The `initial` block runs once at the start of simulation.
+    initial begin
+
+        /* === Test Case 0x0 === */
+
+        // Assign test input value 0x0 to `digitTest`.
+        // Use non-blocking assignment (`<=`).
+        digitTest <= /* [3] TODO */
+
+        // Delay for 10 ps.  Use `#` command.
+        /* [4] TODO */
+
+        // Check if module output is incorrect.
+        if (segmentsMeasured !== /* [5] TODO */) begin
+
+            // Display error message with test case number.
+            $display("ERROR: ..." /* [6] TODO */);
+
+        end
+
+
+        /* === Test Case 0x1 === */
+
+        // Assign test input value 0x1 to `digitTest`.
+        /* [3] TODO */
+
+        // Delay for 10 ps.
+        /* [4] TODO */
+
+        // Check if module output is incorrect.
+        if (/* [5] TODO */) begin
+
+            // Display error message with test case number.
+            /* [6] TODO */
+
+        end
+
+
+        // [7] Repeat above process for all remaining inputs.
+
+        /* === Test Cases 0x2 to 0xF === */
+        /* [7] TODO */
+
+
+        /* === End of Simulation === */
+        $stop;
+    end
+
+endmodule
+

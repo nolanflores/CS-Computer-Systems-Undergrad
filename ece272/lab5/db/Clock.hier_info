@@ -1,0 +1,449 @@
+|ClockDisplay
+clock => clock.IN1
+reset_n => reset_n.IN1
+Seg0[0] << SevenSegmentDecode:secOnesDisplay.segments
+Seg0[1] << SevenSegmentDecode:secOnesDisplay.segments
+Seg0[2] << SevenSegmentDecode:secOnesDisplay.segments
+Seg0[3] << SevenSegmentDecode:secOnesDisplay.segments
+Seg0[4] << SevenSegmentDecode:secOnesDisplay.segments
+Seg0[5] << SevenSegmentDecode:secOnesDisplay.segments
+Seg0[6] << SevenSegmentDecode:secOnesDisplay.segments
+Seg1[0] << SevenSegmentDecode:secTensDisplay.segments
+Seg1[1] << SevenSegmentDecode:secTensDisplay.segments
+Seg1[2] << SevenSegmentDecode:secTensDisplay.segments
+Seg1[3] << SevenSegmentDecode:secTensDisplay.segments
+Seg1[4] << SevenSegmentDecode:secTensDisplay.segments
+Seg1[5] << SevenSegmentDecode:secTensDisplay.segments
+Seg1[6] << SevenSegmentDecode:secTensDisplay.segments
+Seg2[0] << SevenSegmentDecode:minOnesDisplay.segments
+Seg2[1] << SevenSegmentDecode:minOnesDisplay.segments
+Seg2[2] << SevenSegmentDecode:minOnesDisplay.segments
+Seg2[3] << SevenSegmentDecode:minOnesDisplay.segments
+Seg2[4] << SevenSegmentDecode:minOnesDisplay.segments
+Seg2[5] << SevenSegmentDecode:minOnesDisplay.segments
+Seg2[6] << SevenSegmentDecode:minOnesDisplay.segments
+Seg3[0] << SevenSegmentDecode:minTensDisplay.segments
+Seg3[1] << SevenSegmentDecode:minTensDisplay.segments
+Seg3[2] << SevenSegmentDecode:minTensDisplay.segments
+Seg3[3] << SevenSegmentDecode:minTensDisplay.segments
+Seg3[4] << SevenSegmentDecode:minTensDisplay.segments
+Seg3[5] << SevenSegmentDecode:minTensDisplay.segments
+Seg3[6] << SevenSegmentDecode:minTensDisplay.segments
+Seg4[0] << SevenSegmentDecode:hourOnesDisplay.segments
+Seg4[1] << SevenSegmentDecode:hourOnesDisplay.segments
+Seg4[2] << SevenSegmentDecode:hourOnesDisplay.segments
+Seg4[3] << SevenSegmentDecode:hourOnesDisplay.segments
+Seg4[4] << SevenSegmentDecode:hourOnesDisplay.segments
+Seg4[5] << SevenSegmentDecode:hourOnesDisplay.segments
+Seg4[6] << SevenSegmentDecode:hourOnesDisplay.segments
+Seg5[0] << SevenSegmentDecode:hourTensDisplay.segments
+Seg5[1] << SevenSegmentDecode:hourTensDisplay.segments
+Seg5[2] << SevenSegmentDecode:hourTensDisplay.segments
+Seg5[3] << SevenSegmentDecode:hourTensDisplay.segments
+Seg5[4] << SevenSegmentDecode:hourTensDisplay.segments
+Seg5[5] << SevenSegmentDecode:hourTensDisplay.segments
+Seg5[6] << SevenSegmentDecode:hourTensDisplay.segments
+
+
+|ClockDisplay|Clock:clk
+clock => clock.IN4
+reset_n => reset_n.IN4
+seconds[0] <= Counter:second_counter.count
+seconds[1] <= Counter:second_counter.count
+seconds[2] <= Counter:second_counter.count
+seconds[3] <= Counter:second_counter.count
+seconds[4] <= Counter:second_counter.count
+seconds[5] <= Counter:second_counter.count
+minutes[0] <= Counter:minute_counter.count
+minutes[1] <= Counter:minute_counter.count
+minutes[2] <= Counter:minute_counter.count
+minutes[3] <= Counter:minute_counter.count
+minutes[4] <= Counter:minute_counter.count
+minutes[5] <= Counter:minute_counter.count
+hours[0] <= Counter:hour_counter.count
+hours[1] <= Counter:hour_counter.count
+hours[2] <= Counter:hour_counter.count
+hours[3] <= Counter:hour_counter.count
+hours[4] <= Counter:hour_counter.count
+
+
+|ClockDisplay|Clock:clk|Counter:tick_counter
+clock => count[0]~reg0.CLK
+clock => count[1]~reg0.CLK
+clock => count[2]~reg0.CLK
+clock => count[3]~reg0.CLK
+clock => count[4]~reg0.CLK
+clock => count[5]~reg0.CLK
+clock => count[6]~reg0.CLK
+clock => count[7]~reg0.CLK
+clock => count[8]~reg0.CLK
+clock => count[9]~reg0.CLK
+clock => count[10]~reg0.CLK
+clock => count[11]~reg0.CLK
+clock => count[12]~reg0.CLK
+clock => count[13]~reg0.CLK
+clock => count[14]~reg0.CLK
+clock => count[15]~reg0.CLK
+clock => count[16]~reg0.CLK
+clock => count[17]~reg0.CLK
+clock => count[18]~reg0.CLK
+clock => count[19]~reg0.CLK
+clock => count[20]~reg0.CLK
+clock => count[21]~reg0.CLK
+clock => count[22]~reg0.CLK
+clock => count[23]~reg0.CLK
+clock => count[24]~reg0.CLK
+clock => count[25]~reg0.CLK
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+reset_n => count[0]~reg0.ACLR
+reset_n => count[1]~reg0.ACLR
+reset_n => count[2]~reg0.ACLR
+reset_n => count[3]~reg0.ACLR
+reset_n => count[4]~reg0.ACLR
+reset_n => count[5]~reg0.ACLR
+reset_n => count[6]~reg0.ACLR
+reset_n => count[7]~reg0.ACLR
+reset_n => count[8]~reg0.ACLR
+reset_n => count[9]~reg0.ACLR
+reset_n => count[10]~reg0.ACLR
+reset_n => count[11]~reg0.ACLR
+reset_n => count[12]~reg0.ACLR
+reset_n => count[13]~reg0.ACLR
+reset_n => count[14]~reg0.ACLR
+reset_n => count[15]~reg0.ACLR
+reset_n => count[16]~reg0.ACLR
+reset_n => count[17]~reg0.ACLR
+reset_n => count[18]~reg0.ACLR
+reset_n => count[19]~reg0.ACLR
+reset_n => count[20]~reg0.ACLR
+reset_n => count[21]~reg0.ACLR
+reset_n => count[22]~reg0.ACLR
+reset_n => count[23]~reg0.ACLR
+reset_n => count[24]~reg0.ACLR
+reset_n => count[25]~reg0.ACLR
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[8] <= count[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[9] <= count[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[10] <= count[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[11] <= count[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[12] <= count[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[13] <= count[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[14] <= count[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[15] <= count[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[16] <= count[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[17] <= count[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[18] <= count[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[19] <= count[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[20] <= count[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[21] <= count[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[22] <= count[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[23] <= count[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[24] <= count[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[25] <= count[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|Clock:clk|Counter:second_counter
+clock => count[0]~reg0.CLK
+clock => count[1]~reg0.CLK
+clock => count[2]~reg0.CLK
+clock => count[3]~reg0.CLK
+clock => count[4]~reg0.CLK
+clock => count[5]~reg0.CLK
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+reset_n => count[0]~reg0.ACLR
+reset_n => count[1]~reg0.ACLR
+reset_n => count[2]~reg0.ACLR
+reset_n => count[3]~reg0.ACLR
+reset_n => count[4]~reg0.ACLR
+reset_n => count[5]~reg0.ACLR
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|Clock:clk|Counter:minute_counter
+clock => count[0]~reg0.CLK
+clock => count[1]~reg0.CLK
+clock => count[2]~reg0.CLK
+clock => count[3]~reg0.CLK
+clock => count[4]~reg0.CLK
+clock => count[5]~reg0.CLK
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+reset_n => count[0]~reg0.ACLR
+reset_n => count[1]~reg0.ACLR
+reset_n => count[2]~reg0.ACLR
+reset_n => count[3]~reg0.ACLR
+reset_n => count[4]~reg0.ACLR
+reset_n => count[5]~reg0.ACLR
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|Clock:clk|Counter:hour_counter
+clock => count[0]~reg0.CLK
+clock => count[1]~reg0.CLK
+clock => count[2]~reg0.CLK
+clock => count[3]~reg0.CLK
+clock => count[4]~reg0.CLK
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+reset_n => count[0]~reg0.ACLR
+reset_n => count[1]~reg0.ACLR
+reset_n => count[2]~reg0.ACLR
+reset_n => count[3]~reg0.ACLR
+reset_n => count[4]~reg0.ACLR
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|Parser:sec
+digits[0] => Mod0.IN9
+digits[0] => Div0.IN9
+digits[1] => Mod0.IN8
+digits[1] => Div0.IN8
+digits[2] => Mod0.IN7
+digits[2] => Div0.IN7
+digits[3] => Mod0.IN6
+digits[3] => Div0.IN6
+digits[4] => Mod0.IN5
+digits[4] => Div0.IN5
+digits[5] => Mod0.IN4
+digits[5] => Div0.IN4
+ones[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+tens[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|Parser:min
+digits[0] => Mod0.IN9
+digits[0] => Div0.IN9
+digits[1] => Mod0.IN8
+digits[1] => Div0.IN8
+digits[2] => Mod0.IN7
+digits[2] => Div0.IN7
+digits[3] => Mod0.IN6
+digits[3] => Div0.IN6
+digits[4] => Mod0.IN5
+digits[4] => Div0.IN5
+digits[5] => Mod0.IN4
+digits[5] => Div0.IN4
+ones[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+tens[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|Parser:hour
+digits[0] => Mod0.IN9
+digits[0] => Div0.IN9
+digits[1] => Mod0.IN8
+digits[1] => Div0.IN8
+digits[2] => Mod0.IN7
+digits[2] => Div0.IN7
+digits[3] => Mod0.IN6
+digits[3] => Div0.IN6
+digits[4] => Mod0.IN5
+digits[4] => Div0.IN5
+digits[5] => Mod0.IN4
+digits[5] => Div0.IN4
+ones[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+tens[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|SevenSegmentDecode:secOnesDisplay
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|SevenSegmentDecode:secTensDisplay
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|SevenSegmentDecode:minOnesDisplay
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|SevenSegmentDecode:minTensDisplay
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|SevenSegmentDecode:hourOnesDisplay
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ClockDisplay|SevenSegmentDecode:hourTensDisplay
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

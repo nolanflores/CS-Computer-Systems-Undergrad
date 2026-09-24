@@ -1,0 +1,30 @@
+@startuml
+
+|User|
+start
+:Login;
+:Open workout dashboard;
+:Click "Create Workout" button;
+
+|System|
+:Load exercise list;
+
+|User|
+:Browse exercises;
+:Click "View Video" on exercise;
+
+|System|
+:Retrieve exercise tutorial video;
+if (Video available?) then (Yes)
+  :Open exercise video viewer;
+  :Play tutorial video;
+else (No)
+  :Display video unavailable error;
+endif
+
+|User|
+:View exercise tutorial;
+:Return to exercise list;
+stop
+
+@enduml

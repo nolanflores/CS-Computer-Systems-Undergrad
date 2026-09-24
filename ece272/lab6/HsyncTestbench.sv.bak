@@ -1,0 +1,54 @@
+module HsyncTestbench();
+
+logic clock;
+logic Hsync;
+logic [9:0] count;
+logic reset_n;
+logic enable_n;
+
+always begin
+	clock = 1'b1;
+	#5;
+	clock = 1'b0;
+	#5;
+end
+
+ToggleClock tclock(
+	.clock(clock),
+	.reset_n(reset_n),
+	.enable_n(enable_n)
+);
+
+Hsync dut(
+	.clock(clock),
+	.enable_n(enable_n),
+	.reset_n(reset_n),
+	.count(count),
+	.Hsync(Hsync)
+);
+
+initial begin
+    $display("=== Start of Simulation ===");
+
+    /* Set initial values of testbench-controlled signals. */
+    reset_n = 1'b0;
+	 #10;
+	 reset_n = 1'b1;
+
+    for(int cycles = 0; cycles < 2; cycles++) begin
+		for(int i = 0; i < 800; i++) begin
+			if(i < 96 && q == 1'b1)begin
+				$display("%0t ps: invalid q value at count=%0d: expected=0  actual=%0b", $time, count, q);
+			end
+			if(i >= 96 && q == 1'b0) begin
+				$display("%0t ps: invalid q value at count=%0d: expected=1  actual=%0b", $time, count, q);
+			end
+			#20;
+		end
+	 end
+
+    $display("=== End of Simulation ===");
+    $stop();
+end
+
+endmodule

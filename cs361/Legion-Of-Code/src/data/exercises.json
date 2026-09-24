@@ -1,0 +1,37 @@
+{
+	"bench-press": {
+		"reps": 5,
+		"sets": 5,
+		"rest_time": 3,
+		"video_id": "https://youtu.be/wzq57DB5Ppg?si=VDtNU_05aODeBA86",
+		"muscle_group": "chest"
+	},
+	"squat": {
+		"reps": 5,
+		"sets": 5,
+		"rest_time": 5,
+		"video_id": "https://youtu.be/rt59bYm7SeE?si=QBLrfcNkJRmdMguy",
+		"muscle_group": "legs"
+	},
+	"deadlift": {
+		"reps": 3,
+		"sets": 5,
+		"rest_time": 5,
+		"video_id": "https://youtu.be/Sk9cS7-2p98?si=RWZgkI1FSHdcuF77",
+		"muscle_group": "back"
+	},
+	"skull-crusher": {
+		"reps": 12,
+		"sets": 3,
+		"rest_time": 2,
+		"video_id": "https://youtu.be/d_KZxkY_0cM?si=9r0mu2DRyKK8df5l",
+		"muscle_group": "triceps"
+	},
+	"lateral-raise": {
+		"reps": 12,
+		"sets": 3,
+		"rest_time": 2,
+		"video_id": "https://youtube.com/shorts/xyK8UiC-BUw?si=e95Xc-92qditIebq",
+		"muscle_group": "shoulders"
+	}
+}

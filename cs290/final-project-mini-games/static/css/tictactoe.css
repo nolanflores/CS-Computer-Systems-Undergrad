@@ -1,0 +1,94 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Playwrite HU', cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    height: 100%;
+}
+
+
+.title {
+    color: #000080;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 1em;
+}
+
+.display {
+    color: #000080;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.container{
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.box{
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    cursor: pointer;
+    user-select: none;
+}
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(n+7){
+    border-bottom: none;
+}
+
+.playerX {
+    color: 	#228B22;
+}
+
+.playerO {
+    color: #9D00FF;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.controls button {
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+#restart {
+    margin: 0 auto;
+    background-color: #FF3860;
+}

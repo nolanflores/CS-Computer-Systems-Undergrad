@@ -1,0 +1,23 @@
+@startuml C-06-Viewer
+skinparam classAttributeIconSize 0
+
+class Viewer {
+  .. Private Attributes ..
+  - _planner: Planner
+  .. Public Methods ..
+  + __init__()
+  + create_plan(): None
+  + view_plans(): None
+  + log_workout(): None
+  + view_logs(): None
+  + select_workout_plan(): WorkoutPlan
+  .. Private Methods ..
+  - _view_workout_session(session: Session): None
+  - _logs_gui(): None
+  - _select_plan_gui(): None
+  - _view_plans_gui(): None
+  - _log_workout_gui(): Session
+  - _create_plan_gui(): WorkoutPlan
+}
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+
+|User|
+start
+:Login;
+:Open workout dashboard;
+
+|System|
+:Load existing plans;
+
+|User|
+:Select workout plan;
+:Choose day of week;
+:Click save;
+
+|System|
+:Validate schedule;
+
+if (Valid schedule?) then (Yes)
+  :Store schedule in database;
+  :Update dashboard;
+else (No)
+  :Display scheduling error;
+endif
+
+|User|
+:View updated dashboard;
+
+stop
+@enduml

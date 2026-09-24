@@ -1,0 +1,14 @@
+module VendingMachine(
+	input logic clk,
+	input logic nickel,
+	input logic dime,
+	input logic refund,
+	input logic reset,
+	output logic vend,
+	output logic nickel_out,
+	output logic dime_out
+);
+
+
+
+endmodule

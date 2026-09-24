@@ -1,0 +1,24 @@
+@startuml
+
+title AD-03 Start Workout from Saved Plan 
+
+|User|
+start
+:Log into application;
+:Navigate to "My Workout Plans";
+:Select "Upper Body" plan;
+:Click "Start Workout";
+|System|
+:Create new workout session;
+:Link session to selected workout plan;
+:Load exercises in plan order\n(Bench Press, Shoulder Press);
+if (Session created successfully?) then (Yes)
+  :Store session in workout history;
+  :Display loaded exercises to user;
+else (No)
+  :Display error message;
+endif
+|User|
+:Review workout session and exercises;
+stop
+@enduml

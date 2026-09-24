@@ -1,0 +1,34 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/nolan/intelFPGA_lite/21.1/modelsim_ase/bin
+vSevenSegmentDisplay
+!s110 1745359627
+!i10b 1
+!s100 RD25g_]CD]oQaG5CVo]o=0
+I>ZB72c:XjL6P=dJ^KgPAH0
+d/home/nolan/school/ece272/lab3
+w1745359606
+8/home/nolan/school/ece272/lab3/SevenSegmentDisplay.v
+F/home/nolan/school/ece272/lab3/SevenSegmentDisplay.v
+!i122 5
+L0 20 115
+VDg1SIo80bB@j0V0VzS_@n1
+OV;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1745359627.000000
+!s107 /home/nolan/school/ece272/lab3/SevenSegmentDisplay.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/nolan/school/ece272/lab3/SevenSegmentDisplay.v|
+!i113 1
+o-work work
+tCvgOpt 0
+n@seven@segment@display

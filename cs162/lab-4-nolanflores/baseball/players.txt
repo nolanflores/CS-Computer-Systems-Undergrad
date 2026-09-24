@@ -1,0 +1,5 @@
+4
+Joe Redfield 0.8
+Sally Whiting 0.9
+Tom Thomson 0.65
+Jessica Newman 0.7

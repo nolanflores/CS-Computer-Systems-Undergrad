@@ -1,0 +1,4 @@
+module #(parameter N = 6) ClockDisplay(
+	input logic [N-1:0] digits,
+	output logic [14:0] segments
+);

@@ -1,0 +1,19 @@
+{
+  "name": "assignment-3",
+  "version": "1.0.0",
+  "description": "Ingegration tests for UI-based apps",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/user-event": "^14.6.1",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.4.1",
+    "node-fetch": "^2.7.0"
+  },
+  "dependencies": {
+    "msw": "^1.3.5"
+  }
+}

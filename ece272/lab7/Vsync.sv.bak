@@ -1,0 +1,5 @@
+module Vsync(
+	input logic [9:0] clock,
+	output logic vsync,
+	output logic vdsiplay
+);

@@ -1,0 +1,48 @@
+module VendingMachineTop(
+	input logic clk,
+	input logic nickel,
+	input logic dime,
+	input logic refund,
+	input logic reset,
+	output logic vend,
+	output logic nickel_out,
+	output logic dime_out
+);
+
+logic [5:0] money;//seven bits to store up to $0.64
+logic refundEnable;
+
+always_ff @(posedge clk or posedge reset) begin
+	if(reset == 1'b1) begin
+		money <= 6'b0;
+		refundEnable <= 1'b0;
+		vend <= 1'b0;
+		nickel_out <= 1'b0;
+		dime_out <= 1'b0;
+	end else if(refundEnable == 1'b1)begin
+		vend <= 1'b0;
+		if(money >= 6'd10)begin
+			money <= money - 6'd10;
+			dime_out <= 1'b1;
+			nickel_out <= 1'b0;
+		end else if(money >= 6'd5) begin
+			money <= money - 6'd5;
+			dime_out <= 1'b0;
+			nickel_out <= 1'b1;
+		end else begin
+			dime_out <= 1'b0;
+			nickel_out <= 1'b0;
+			refundEnable <= 1'b0;
+		end
+	end else begin
+		if(refund == 1'b1) begin
+			refundEnable <= 1'b1;
+		end else if(money >= 6'd30) begin
+			money <= money - 6'd30;
+			refundEnable <= 1'b1;
+			vend <= 1'b1;
+		end
+	end
+end
+
+endmodule

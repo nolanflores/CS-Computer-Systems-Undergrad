@@ -1,0 +1,18 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class WorkoutPlan {
+  .. Public Attributes ..
+  + id: int
+  + workout_plan: dict[str, Workout]
+  + last_rest_day: str
+  + current_streak: int
+  .. Public Methods ..
+  + __init__()
+  + workout_plan_empty(): bool
+  + add_workout(day: str, workout: Workout): bool
+  + remove_workout(day: str): bool
+  + update_workout(day: str, workout: Workout): bool
+  + calculate_rest_day(): date
+}
+@enduml

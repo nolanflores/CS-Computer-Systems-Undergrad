@@ -1,0 +1,232 @@
+/*
+ * Styles for the default layout
+ */
+html, body{
+    font-family: serif, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+html{
+    background-color: black;
+}
+body{
+    background-color: white;
+}
+
+/*
+ * Styles for the layout (header and navbar)
+*/
+header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+}
+header h1{
+    color: white;
+    margin: 0 0 0 10px;
+    font-size: 40px;
+}
+#hamburger{
+    height: 50px;
+    margin: 10px;
+}
+.sidebar{
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 70px;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    transition: 0.5s;
+    z-index: 100;
+}
+.sidebar-active{
+    left: 0;
+}
+nav a{
+    display: block;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #242424;
+}
+
+/*
+ * Styles for the home page
+*/
+.homePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+.homeTitle{
+    font-size: 60px;
+    margin-bottom: 0;
+}
+.cs290{
+    margin-bottom: 0;
+}
+.game-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.game-link{
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+.game-link:hover {
+    transform: scale(1.1);
+}
+.game-link span {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/*
+ * Styles for the 404 page
+ */
+.container404{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container404 h1{
+    font-size: 100px;
+    margin: 0;
+}
+.container404 p{
+    font-size: 30px;
+    margin: 0;
+}
+.container404 a{
+    color: black;
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.container404 a:hover{
+    background-color: gray;
+}
+
+/*
+ * Styles for the login page
+ */
+.loginHeader{
+    color: white;
+    margin: 0 0 0 20px;
+    font-size: 40px;
+    padding: 10px;
+}
+.loginPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.loginCard{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    height: 250px;
+    width: 500px;
+    border-radius: 8px;
+}
+.loginTitle{
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid black;
+    height: 50px;
+    margin-bottom: 0;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding-inline: 25%;
+}
+#username{
+    width: "100%";
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.playButtonContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#playButton{
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+/*
+ * Styles for the statistics page
+*/
+.statsPage{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 5%;
+}
+.statsTitle{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+}
+table{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+th,td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background-color: gray;
+    position: relative;
+    z-index: 1;
+}
+td{
+    background-color: lightgray;
+}
+.arrow{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

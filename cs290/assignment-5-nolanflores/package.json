@@ -1,0 +1,17 @@
+{
+  "name": "assignment-5",
+  "version": "1.0.0",
+  "description": "Express serving and Handlebars templating",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "handlebars views/partials/post.handlebars -f static/postTemplate.js",
+    "prestart": "npm run build"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "handlebars": "^4.7.8"
+  }
+}

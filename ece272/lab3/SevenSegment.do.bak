@@ -1,0 +1,52 @@
+vsim -gui work.SevenSegmentDisplay
+add wave *
+
+force digit 0000
+run 10
+
+force digit 0001
+run 10
+
+force digit 0010
+run 10
+
+force digit 0011
+run 10
+
+
+force digit 0100
+run 10
+
+force digit 0101
+run 10
+
+force digit 0110
+run 10
+
+force digit 0111
+run 10
+
+force digit 1000
+run 10
+
+force digit 1001
+run 10
+
+force digit 1010
+run 10
+
+force digit 1011
+run 10
+
+
+force digit 1100
+run 10
+
+force digit 1101
+run 10
+
+force digit 1110
+run 10
+
+force digit 1111
+run 10

@@ -1,0 +1,9 @@
+module #parameter(N = 4)(
+	input logic clock,
+	input logic clear_n,
+	input logic enable_n,
+	output logic [N-1:0] count
+);
+
+
+endmodule

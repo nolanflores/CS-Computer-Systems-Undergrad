@@ -1,0 +1,62 @@
+|CounterDisplay
+clock => clock.IN1
+clear_n => clear_n.IN1
+addBy[0] => addBy[0].IN1
+addBy[1] => addBy[1].IN1
+addBy[2] => addBy[2].IN1
+addBy[3] => addBy[3].IN1
+Seg0[0] << SevenSegmentDecode:comb_4.segments
+Seg0[1] << SevenSegmentDecode:comb_4.segments
+Seg0[2] << SevenSegmentDecode:comb_4.segments
+Seg0[3] << SevenSegmentDecode:comb_4.segments
+Seg0[4] << SevenSegmentDecode:comb_4.segments
+Seg0[5] << SevenSegmentDecode:comb_4.segments
+Seg0[6] << SevenSegmentDecode:comb_4.segments
+
+
+|CounterDisplay|Counter:comb_3
+clock => clock.IN1
+clear_n => clear_n.IN1
+addBy[0] => Add0.IN4
+addBy[1] => Add0.IN3
+addBy[2] => Add0.IN2
+addBy[3] => Add0.IN1
+count[0] <= RegisterFourBit:dut.q
+count[1] <= RegisterFourBit:dut.q
+count[2] <= RegisterFourBit:dut.q
+count[3] <= RegisterFourBit:dut.q
+
+
+|CounterDisplay|Counter:comb_3|RegisterFourBit:dut
+clock => q[0]~reg0.CLK
+clock => q[1]~reg0.CLK
+clock => q[2]~reg0.CLK
+clock => q[3]~reg0.CLK
+clear_n => q.OUTPUTSELECT
+clear_n => q.OUTPUTSELECT
+clear_n => q.OUTPUTSELECT
+clear_n => q.OUTPUTSELECT
+d[0] => q.DATAA
+d[1] => q.DATAA
+d[2] => q.DATAA
+d[3] => q.DATAA
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CounterDisplay|SevenSegmentDecode:comb_4
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

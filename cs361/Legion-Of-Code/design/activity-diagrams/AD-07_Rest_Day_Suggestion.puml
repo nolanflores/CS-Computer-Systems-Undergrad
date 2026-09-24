@@ -1,0 +1,30 @@
+@startuml
+|User|
+:Log into application; 
+:Open "My Workout Plan"; 
+:Select Workout Plan; 
+
+|System|
+:Load workout plan; 
+
+|User|
+:Logs a workout; 
+
+|System| 
+:Validates changes; 
+if (user has logged 6 days?) then (Yes)
+ :Move back workout plan by a day; 
+ :Add rest day;
+ :Rest workout number track in DB
+ :Update workout in DB; 
+ :Save Changes; 
+ :Return Updated Plan;
+else (No)
+ :Update workout number tracker in DB; 
+ :Save Changes; 
+ :Return workout plan;
+endif
+
+|User|
+:Review Updated Workout Plan;
+@enduml

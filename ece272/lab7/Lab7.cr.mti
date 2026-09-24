@@ -1,0 +1,92 @@
+/home/nolan/school/ece272/lab7/output_files/ColorDecode.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/output_files/ColorDecode.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module ColorDecode
+
+Top level modules:
+	ColorDecode
+
+} {} {}} /home/nolan/school/ece272/lab7/rom_bb.v {1 {vlog -work work -stats=none /home/nolan/school/ece272/lab7/rom_bb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module rom
+
+Top level modules:
+	rom
+
+} {} {}} /home/nolan/school/ece272/lab7/SyncCount.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/SyncCount.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module SyncCount
+
+Top level modules:
+	SyncCount
+
+} {} {}} /home/nolan/school/ece272/lab5/Counter.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab5/Counter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module Counter
+
+Top level modules:
+	Counter
+
+} {} {}} /home/nolan/school/ece272/lab7/ToggleClock.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/ToggleClock.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module ToggleClock
+
+Top level modules:
+	ToggleClock
+
+} {} {}} /home/nolan/school/ece272/lab7/VgaDriver.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/VgaDriver.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module VgaDriver
+
+Top level modules:
+	VgaDriver
+
+} {} {}} /home/nolan/school/ece272/lab7/Mux.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/Mux.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module Mux
+
+Top level modules:
+	Mux
+
+} {} {}} /home/nolan/school/ece272/lab7/ImageTestbench.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/ImageTestbench.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module ImageTestbench
+
+Top level modules:
+	ImageTestbench
+
+} {} {}} /home/nolan/school/ece272/lab7/Vsync.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/Vsync.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module Vsync
+
+Top level modules:
+	Vsync
+
+} {} {}} /home/nolan/school/ece272/lab7/rom.v {1 {vlog -work work -stats=none /home/nolan/school/ece272/lab7/rom.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module rom
+
+Top level modules:
+	rom
+
+} {} {}} /home/nolan/school/ece272/lab7/output_files/AddressDecode.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/output_files/AddressDecode.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module AddressDecode
+
+Top level modules:
+	AddressDecode
+
+} {} {}} /home/nolan/school/ece272/lab7/Hsync.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/Hsync.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module Hsync
+
+Top level modules:
+	Hsync
+
+} {} {}} /home/nolan/school/ece272/lab7/ImageDriver.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab7/ImageDriver.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module ImageDriver
+
+Top level modules:
+	ImageDriver
+
+} {} {}}

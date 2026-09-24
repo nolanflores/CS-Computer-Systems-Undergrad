@@ -1,0 +1,12 @@
+module DisplayClock(
+	input logic clock,
+	input logic reset_n,
+	output logic [6:0] Seg0,
+	output logic [6:0] Seg1,
+	output logic [6:0] Seg2,
+	output logic [6:0] Seg3,
+	output logic [6:0] Seg4,
+	output logic [6:0] Seg5
+);
+
+endmodule

@@ -1,0 +1,15 @@
+/home/nolan/school/ece272/lab3b/RegisterFourBit.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab3b/RegisterFourBit.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module RegisterFourBit
+
+Top level modules:
+	RegisterFourBit
+
+} {} {}} /home/nolan/Downloads/CounterTestbench.sv {1 {vlog -work work -sv -stats=none /home/nolan/Downloads/CounterTestbench.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module CounterTestbench
+
+Top level modules:
+	CounterTestbench
+
+} {} {}}

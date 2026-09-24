@@ -1,0 +1,29 @@
+@startuml
+
+|User|
+start
+:Login;
+:Open workout plans;
+:Select workout plan;
+:Click "Start Workout";
+
+|System|
+:Check exercises in plan;
+
+if (Exercises exist?) then (Yes)
+  :Create workout session;
+  :Load exercises;
+
+  |User|
+  :Begin workout;
+
+else (No)
+  :Show error message;
+  :Block workout start;
+
+  |User|
+  :Return to edit plan;
+endif
+
+stop
+@enduml

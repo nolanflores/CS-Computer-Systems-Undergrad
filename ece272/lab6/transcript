@@ -1,0 +1,49 @@
+# Loading project lab6
+# Compile of Hsync.sv was successful.
+# Compile of HsyncTestbench.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of Hsync.sv was successful.
+# Compile of HsyncTestbench.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of Hsync.sv was successful.
+# Compile of HsyncTestbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.HsyncTestbench
+# vsim work.HsyncTestbench 
+# Start time: 15:20:33 on May 20,2025
+# Loading sv_std.std
+# Loading work.HsyncTestbench
+# Loading work.Hsync
+# ** Error: (vsim-3033) Instantiation of 'Counter' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /HsyncTestbench/dut File: /home/nolan/school/ece272/lab6/Hsync.sv Line: 15
+#         Searched libraries:
+#             /home/nolan/school/ece272/lab6/work
+# Error loading design
+# End time: 15:20:33 on May 20,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 7
+vsim work.HsyncTestbench
+# vsim work.HsyncTestbench 
+# Start time: 15:20:50 on May 20,2025
+# Loading sv_std.std
+# Loading work.HsyncTestbench
+# Loading work.Hsync
+# ** Error: (vsim-3033) Instantiation of 'Counter' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /HsyncTestbench/dut File: /home/nolan/school/ece272/lab6/Hsync.sv Line: 15
+#         Searched libraries:
+#             /home/nolan/school/ece272/lab6/work
+# Error loading design
+# End time: 15:20:50 on May 20,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+vsim work.HsyncTestbench
+# vsim work.HsyncTestbench 
+# Start time: 15:21:05 on May 20,2025
+# Loading sv_std.std
+# Loading work.HsyncTestbench
+# Loading work.Hsync
+# ** Error: (vsim-3033) Instantiation of 'Counter' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /HsyncTestbench/dut File: /home/nolan/school/ece272/lab6/Hsync.sv Line: 15
+#         Searched libraries:
+#             /home/nolan/school/ece272/lab6/work
+# Error loading design
+# End time: 15:21:05 on May 20,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1

@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/nolan/intelFPGA_lite/21.1/modelsim_ase/bin
+vVendingMachine
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1748308504
+!i10b 1
+!s100 XA>4ii9ZlSRhgVQ5fO1E23
+IGTo?<PCBco6`XJT5C[5HV1
+S1
+Z1 d/home/nolan/school/ece272/DesignProject1
+w1748308369
+8/home/nolan/school/ece272/DesignProject1/VendingMachine.sv
+F/home/nolan/school/ece272/DesignProject1/VendingMachine.sv
+!i122 0
+L0 1 48
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OV;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1748308504.000000
+!s107 /home/nolan/school/ece272/DesignProject1/VendingMachine.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/DesignProject1/VendingMachine.sv|
+!i113 1
+Z4 o-work work -sv
+Z5 tCvgOpt 0
+n@vending@machine
+vVendingMachineTop
+R0
+!s110 1748409742
+!i10b 1
+!s100 NVVQ3oL;8Zjf;oglY>Mai0
+IK6d>NZ9iP1JmS[Rn2Ee>Q0
+S1
+R1
+w1748409447
+8/home/nolan/school/ece272/DesignProject1/VendingMachineTop.sv
+F/home/nolan/school/ece272/DesignProject1/VendingMachineTop.sv
+!i122 3
+L0 1 52
+R2
+R3
+r1
+!s85 0
+31
+!s108 1748409742.000000
+!s107 /home/nolan/school/ece272/DesignProject1/VendingMachineTop.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/DesignProject1/VendingMachineTop.sv|
+!i113 1
+R4
+R5
+n@vending@machine@top

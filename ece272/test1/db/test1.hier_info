@@ -1,0 +1,5 @@
+|test1
+Y <= <GND>
+A => ~NO_FANOUT~
+
+

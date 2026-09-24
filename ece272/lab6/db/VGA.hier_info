@@ -1,0 +1,195 @@
+|VgaDriver
+clock => clock.IN3
+reset_n => reset_n.IN3
+redControl[0] => redControl[0].IN1
+redControl[1] => redControl[1].IN1
+greenControl[0] => greenControl[0].IN1
+greenControl[1] => greenControl[1].IN1
+blueControl[0] => blueControl[0].IN1
+blueControl[1] => blueControl[1].IN1
+Hsync << Hsync:hs.Hsync
+Vsync << Vsync:vs.Vsync
+redDisplay[0] << ColorDriver:red.display
+redDisplay[1] << ColorDriver:red.display
+redDisplay[2] << ColorDriver:red.display
+redDisplay[3] << ColorDriver:red.display
+greenDisplay[0] << ColorDriver:green.display
+greenDisplay[1] << ColorDriver:green.display
+greenDisplay[2] << ColorDriver:green.display
+greenDisplay[3] << ColorDriver:green.display
+blueDisplay[0] << ColorDriver:blue.display
+blueDisplay[1] << ColorDriver:blue.display
+blueDisplay[2] << ColorDriver:blue.display
+blueDisplay[3] << ColorDriver:blue.display
+
+
+|VgaDriver|ToggleClock:tc
+clock => enable_n~reg0.CLK
+reset_n => enable_n~reg0.PRESET
+enable_n <= enable_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VgaDriver|Hsync:hs
+clock => clock.IN1
+enable_n => enable_n.IN1
+reset_n => reset_n.IN1
+Hsync <= Hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Hdisplay <= Hdisplay~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Hsync_clear <= Hsync_clear.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VgaDriver|Hsync:hs|Counter:counter
+clock => count[0]~reg0.CLK
+clock => count[1]~reg0.CLK
+clock => count[2]~reg0.CLK
+clock => count[3]~reg0.CLK
+clock => count[4]~reg0.CLK
+clock => count[5]~reg0.CLK
+clock => count[6]~reg0.CLK
+clock => count[7]~reg0.CLK
+clock => count[8]~reg0.CLK
+clock => count[9]~reg0.CLK
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+reset_n => count[0]~reg0.ACLR
+reset_n => count[1]~reg0.ACLR
+reset_n => count[2]~reg0.ACLR
+reset_n => count[3]~reg0.ACLR
+reset_n => count[4]~reg0.ACLR
+reset_n => count[5]~reg0.ACLR
+reset_n => count[6]~reg0.ACLR
+reset_n => count[7]~reg0.ACLR
+reset_n => count[8]~reg0.ACLR
+reset_n => count[9]~reg0.ACLR
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[8] <= count[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[9] <= count[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VgaDriver|Vsync:vs
+clock => clock.IN1
+enable_n => ~NO_FANOUT~
+reset_n => reset_n.IN1
+Hsync_clear => clear_n.IN1
+Hsync_clear => _.IN1
+Vsync <= Vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Vdisplay <= Vdisplay~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VgaDriver|Vsync:vs|Counter:vcounter
+clock => count[0]~reg0.CLK
+clock => count[1]~reg0.CLK
+clock => count[2]~reg0.CLK
+clock => count[3]~reg0.CLK
+clock => count[4]~reg0.CLK
+clock => count[5]~reg0.CLK
+clock => count[6]~reg0.CLK
+clock => count[7]~reg0.CLK
+clock => count[8]~reg0.CLK
+clock => count[9]~reg0.CLK
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+clear_n => count.OUTPUTSELECT
+reset_n => count[0]~reg0.ACLR
+reset_n => count[1]~reg0.ACLR
+reset_n => count[2]~reg0.ACLR
+reset_n => count[3]~reg0.ACLR
+reset_n => count[4]~reg0.ACLR
+reset_n => count[5]~reg0.ACLR
+reset_n => count[6]~reg0.ACLR
+reset_n => count[7]~reg0.ACLR
+reset_n => count[8]~reg0.ACLR
+reset_n => count[9]~reg0.ACLR
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+enable_n => count.OUTPUTSELECT
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[8] <= count[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[9] <= count[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VgaDriver|ColorDriver:red
+control[0] => display.DATAB
+control[0] => display.DATAB
+control[1] => display.DATAB
+control[1] => display.DATAB
+Hdisplay => always0.IN0
+Vdisplay => always0.IN1
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= display.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VgaDriver|ColorDriver:green
+control[0] => display.DATAB
+control[0] => display.DATAB
+control[1] => display.DATAB
+control[1] => display.DATAB
+Hdisplay => always0.IN0
+Vdisplay => always0.IN1
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= display.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VgaDriver|ColorDriver:blue
+control[0] => display.DATAB
+control[0] => display.DATAB
+control[1] => display.DATAB
+control[1] => display.DATAB
+Hdisplay => always0.IN0
+Vdisplay => always0.IN1
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= display.DB_MAX_OUTPUT_PORT_TYPE
+
+

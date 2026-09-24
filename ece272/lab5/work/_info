@@ -1,0 +1,86 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/nolan/intelFPGA_lite/21.1/modelsim_ase/bin
+vClock
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1747176521
+!i10b 1
+!s100 QbLD9CE`?]c2oX4di9S6J1
+I79_G[MGRge]kL7n>hgC8d3
+S1
+Z2 d/home/nolan/school/ece272/lab5
+w1747176483
+8/home/nolan/school/ece272/lab5/Clock.sv
+F/home/nolan/school/ece272/lab5/Clock.sv
+!i122 88
+L0 1 58
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z5 !s108 1747176521.000000
+!s107 /home/nolan/school/ece272/lab5/Clock.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab5/Clock.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@clock
+vClockTestbench
+R0
+!s110 1747176522
+!i10b 1
+!s100 SO2d=kQ>z2?Ce>CEN_<Li1
+IVAPj4bJe8=Dld3UzDDN7?0
+S1
+R2
+w1747171639
+8/home/nolan/school/ece272/lab5/ClockTestbench.sv
+F/home/nolan/school/ece272/lab5/ClockTestbench.sv
+!i122 89
+L0 1 48
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab5/ClockTestbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab5/ClockTestbench.sv|
+!i113 1
+R6
+R7
+n@clock@testbench
+vCounter
+R0
+R1
+!i10b 1
+!s100 Y2ThS52c;fMaEGA`^5hUl3
+ISOL>cEU;<<ho^6LS@UdOI1
+S1
+R2
+w1746569465
+8/home/nolan/school/ece272/lab5/Counter.sv
+F/home/nolan/school/ece272/lab5/Counter.sv
+!i122 87
+L0 1 22
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab5/Counter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab5/Counter.sv|
+!i113 1
+R6
+R7
+n@counter

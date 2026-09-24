@@ -1,0 +1,143 @@
+<main class="content">
+    <aside class="filter-container">
+
+    <h2>Filters</h2>
+
+    <div class="filter-input-container">
+        <label for="filter-text" class="filter-input-label">Text</label>
+        <div class="filter-input-element">
+        <input type="text" name="filter-text" id="filter-text" class="filter-input">
+        </div>
+    </div>
+
+    <div class="filter-input-container">
+        <label for="filter-min-price" class="filter-input-label">Price</label>
+        <div class="filter-input-element">
+        <input type="text" name="filter-min-price" id="filter-min-price" class="filter-input" placeholder="min">
+        </div>
+        <div class="filter-input-element">
+        <input type="text" name="filter-max-price" id="filter-max-price" class="filter-input" placeholder="max">
+        </div>
+    </div>
+
+    <div class="filter-input-container">
+        <label for="filter-city" class="filter-input-label">City</label>
+        <div class="filter-input-element">
+        <select id="filter-city" class="filter-input" name="filter-city">
+            <option selected value="">Any</option>
+            <option>Corvallis</option>
+            <option>Albany</option>
+            <option>Eugene</option>
+            <option>Portland</option>
+            <option>Salem</option>
+            <option>Bend</option>
+        </select>
+        </div>
+    </div>
+
+    <div class="filter-input-container">
+        <fieldset id="filter-condition" class="filter-fieldset">
+        <legend>Condition</legend>
+        <div>
+            <input type="checkbox" name="filter-condition" id="filter-condition-new" value="new">
+            <label for="filter-condition-new">New</label>
+        </div>
+        <div>
+            <input type="checkbox" name="filter-condition" id="filter-condition-excellent" value="excellent">
+            <label for="filter-condition-excellent">Excellent</label>
+        </div>
+        <div>
+            <input type="checkbox" name="filter-condition" id="filter-condition-good" value="good">
+            <label for="filter-condition-good">Good</label>
+        </div>
+        <div>
+            <input type="checkbox" name="filter-condition" id="filter-condition-fair" value="fair">
+            <label for="filter-condition-fair">Fair</label>
+        </div>
+        <div>
+            <input type="checkbox" name="filter-condition" id="filter-condition-poor" value="poor">
+            <label for="filter-condition-poor">Poor</label>
+        </div>
+        </fieldset>
+    </div>
+
+    <button id="filter-update-button" class="action-button">Update</button>
+
+    </aside>
+
+    <section id="posts">
+        {{#each posts}}
+            {{> post}}
+        {{/each}}
+    </section>
+
+</main>
+
+<button type="button" id="sell-something-button"><i class="fas fa-plus"></i></button>
+
+<div id="modal-backdrop" class="hidden"></div>
+<div id="sell-something-modal" class="hidden">
+    <div class="modal-dialog">
+
+    <div class="modal-header">
+        <h3>Sell something on Benny's List</h3>
+        <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="post-input-element">
+        <label for="post-text-input">Item description</label>
+        <input type="text" id="post-text-input"></input>
+        </div>
+
+        <div class="post-input-element">
+        <label for="post-photo-input">Photo URL</label>
+        <input type="text" id="post-photo-input">
+        </div>
+
+        <div class="post-input-element">
+        <label for="post-price-input">Selling price ($)</label>
+        <input type="number" id="post-price-input">
+        </div>
+
+        <div class="post-input-element">
+        <label for="post-city-input">City</label>
+        <input type="text" id="post-city-input">
+        </div>
+
+        <div class="post-input-element">
+        <fieldset id="post-condition-fieldset" class="post-fieldset">
+            <legend>Condition</legend>
+            <div>
+            <input type="radio" name="post-condition" id="post-condition-new" value="new" checked>
+            <label for="post-condition-new">New</label>
+            </div>
+            <div>
+            <input type="radio" name="post-condition" id="post-condition-excellent" value="excellent">
+            <label for="post-condition-excellent">Excellent</label>
+            </div>
+            <div>
+            <input type="radio" name="post-condition" id="post-condition-good" value="good">
+            <label for="post-condition-good">Good</label>
+            </div>
+            <div>
+            <input type="radio" name="post-condition" id="post-condition-fair" value="fair">
+            <label for="post-condition-fair">Fair</label>
+            </div>
+            <div>
+            <input type="radio" name="post-condition" id="post-condition-poor" value="poor">
+            <label for="post-condition-poor">Poor</label>
+            </div>
+        </fieldset>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+        <button type="button" id="modal-accept" class="action-button">Create Post</button>
+    </div>
+
+    </div>
+</div>

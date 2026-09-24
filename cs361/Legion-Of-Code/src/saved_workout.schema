@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "patternProperties": {
+    "^\\d+$": {
+      "type": "object",
+      "properties": {
+        "sun": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "reps": { "type": "integer" },
+              "sets": { "type": "integer" },
+              "rest_time": { "type": "integer" },
+              "video_id": { "type": "string" }
+            },
+            "required": ["name", "reps", "sets", "rest_time", "video_id"],
+            "additionalProperties": false
+          }
+        },
+        "mon": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "reps": { "type": "integer" },
+              "sets": { "type": "integer" },
+              "rest_time": { "type": "integer" },
+              "video_id": { "type": "string" }
+            },
+            "required": ["name", "reps", "sets", "rest_time", "video_id"],
+            "additionalProperties": false
+          }
+        },
+        "tues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "reps": { "type": "integer" },
+              "sets": { "type": "integer" },
+              "rest_time": { "type": "integer" },
+              "video_id": { "type": "string" }
+            },
+            "required": ["name", "reps", "sets", "rest_time", "video_id"],
+            "additionalProperties": false
+          }
+        },
+        "wed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "reps": { "type": "integer" },
+              "sets": { "type": "integer" },
+              "rest_time": { "type": "integer" },
+              "video_id": { "type": "string" }
+            },
+            "required": ["name", "reps", "sets", "rest_time", "video_id"],
+            "additionalProperties": false
+          }
+        },
+        "thurs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "reps": { "type": "integer" },
+              "sets": { "type": "integer" },
+              "rest_time": { "type": "integer" },
+              "video_id": { "type": "string" }
+            },
+            "required": ["name", "reps", "sets", "rest_time", "video_id"],
+            "additionalProperties": false
+          }
+        },
+        "fri": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "reps": { "type": "integer" },
+              "sets": { "type": "integer" },
+              "rest_time": { "type": "integer" },
+              "video_id": { "type": "string" }
+            },
+            "required": ["name", "reps", "sets", "rest_time", "video_id"],
+            "additionalProperties": false
+          }
+        },
+        "sat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "reps": { "type": "integer" },
+              "sets": { "type": "integer" },
+              "rest_time": { "type": "integer" },
+              "video_id": { "type": "string" }
+            },
+            "required": ["name", "reps", "sets", "rest_time", "video_id"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

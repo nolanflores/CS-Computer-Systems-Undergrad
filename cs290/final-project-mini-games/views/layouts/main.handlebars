@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini Games</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/css/{{style}}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.js" charset="utf-8" defer></script>
+        <script src="/templates.js" charset="utf-8" defer></script>
+        <!-- The various fonts (not sure how much these are needed)-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <img id="hamburger" src="/assets/hamburger.png" alt="Menu">
+            <h1>Mini Games</h1>
+        </header>
+        <nav id="sidebar" class="sidebar">
+            <a href="/">Home</a>
+            <a href="/tictactoe">Tic Tac Toe</a>
+            <a href="/hangman">Hangman</a>
+            <a href="/cards">Card Game</a>
+            <a href="/stats">Statistics</a>
+        </nav>
+        <script src="/scripts/navbar.js"></script>
+        {{{body}}}
+    </body>
+</html>

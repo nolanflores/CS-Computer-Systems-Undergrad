@@ -1,0 +1,52 @@
+@startuml
+|User|
+start
+
+:User logs into application;
+
+:User navigates to workout dashboard;
+
+:User selects "Add Workout" view;
+
+|System|
+
+if (User has logged workouts?) then (Yes)
+  :Retrieve user's full workout history;
+
+  :Analyze muscle groups targeted in previous workouts;
+
+  :Calculate frequency countfor each muscle group;
+
+  :Sort muscle groups byfrequency (ascending);
+
+  if (Least-worked group rested at least 2 days?) then (Yes)
+    :\nGenerate suggestion notification for that muscle group;
+
+    :Display notification to user: \n"We suggest targeting [Muscle Group] today!";
+  else (No)
+    if (More muscle groups to evaluate?) then (Yes)
+      :Move to next least-frequent muscle group;
+
+      :Check if new candidate has rested at least 2 days;
+
+      :Generate suggestion for valid candidate group;
+
+      :Display notification: \n"We suggest targeting [Muscle Group] today!";
+    else (No)
+      :Display fallback message:\n "All groups are active — choose freely!";
+    endif
+  endif
+else (No)
+  :Display message:\n "Log workouts to receive muscle group suggestions";
+endif
+
+|User|
+
+:User reviews suggestion and proceeds to add workout;
+
+|System|
+
+:Log selected workout to user history;
+
+stop
+@enduml

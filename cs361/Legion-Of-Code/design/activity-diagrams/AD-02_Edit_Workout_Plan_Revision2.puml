@@ -1,0 +1,30 @@
+@startuml
+
+|User|
+start
+:Log into application;
+:Open "My Workout Plans";
+:Select workout plan;
+
+|System|
+:Load workout plan;
+
+|User|
+:Edit sets/reps;
+
+|System|
+:Validate changes;
+
+if (Input valid?) then (Yes)
+  :Update workout plan in database;
+  :Save changes;
+  :Return updated plan;
+else (No)
+  :Display validation error;
+endif
+
+|User|
+:Review updated workout plan;
+
+stop
+@enduml

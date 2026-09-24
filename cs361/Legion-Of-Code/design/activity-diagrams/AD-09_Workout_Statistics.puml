@@ -1,0 +1,43 @@
+@startuml
+|User|
+start
+:User logs into application;
+
+:User navigates to workout dashboard;
+
+:User selects "Progress Statistics" view;
+
+|System|
+if (User has logged workouts?) then (No)
+  |System|
+  :Display message: 
+  "Log workouts to see statistics";
+  
+  |User|
+  :User logs workout(s);
+  
+else (Yes)
+  |System|
+
+  :Calculate basic statistics:
+  - Total workouts count
+  - Average per week
+  - Current streak;
+  
+  :Calculate weekly totals 
+  for chart display;
+  
+  :Display statistics dashboard
+  with all calculated metrics;
+  
+  |User|
+  :User reviews current 
+  progress statistics;
+  
+  
+  
+endif
+
+|System|
+stop
+@enduml

@@ -1,0 +1,33 @@
+# Loading project DesignProject2
+# Compile of VendingMachineTop.sv was successful.
+vsim work.VendingMachineTop
+# vsim work.VendingMachineTop 
+# Start time: 21:19:24 on Jun 09,2025
+# Loading sv_std.std
+# Loading work.VendingMachineTop
+# Loading work.Counter
+add wave -position insertpoint  \
+sim:/VendingMachineTop/q_count \
+sim:/VendingMachineTop/d_count \
+sim:/VendingMachineTop/n_count
+./seventyCents.do
+# invalid command name "./seventyCents.do"
+do ./seventyCents.do
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position insertpoint  \
+sim:/VendingMachineTop/q_count
+do ./seventyCents.do
+quit -sim
+# End time: 21:33:16 on Jun 09,2025, Elapsed time: 0:13:52
+# Errors: 0, Warnings: 1
+# Compile of VendingMachineTop.sv was successful.
+vsim work.VendingMachineTop
+# vsim work.VendingMachineTop 
+# Start time: 21:33:48 on Jun 09,2025
+# Loading sv_std.std
+# Loading work.VendingMachineTop
+# Loading work.Counter
+do ./seventyCents.do
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# End time: 22:39:30 on Jun 09,2025, Elapsed time: 1:05:42
+# Errors: 0, Warnings: 1

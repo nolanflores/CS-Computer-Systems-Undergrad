@@ -1,0 +1,191 @@
+# Loading project Counter
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv failed with 2 errors.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv failed with 2 errors.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv failed with 2 errors.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv failed with 2 errors.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv was successful.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.CounterTestbench
+# vsim work.CounterTestbench 
+# Start time: 14:57:13 on Apr 29,2025
+# Loading sv_std.std
+# Loading work.CounterTestbench
+# Loading work.Counter
+# Loading work.RegisterFourBit
+# ** Error (suppressible): (vsim-3389) Port 'expected' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CounterTestbench/dut File: /home/nolan/Downloads/CounterTestbench.sv Line: 58
+# Error loading design
+# End time: 14:57:13 on Apr 29,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 10
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv was successful.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.CounterTestbench
+# vsim work.CounterTestbench 
+# Start time: 14:58:59 on Apr 29,2025
+# Loading sv_std.std
+# Loading work.CounterTestbench
+# Loading work.Counter
+# Loading work.RegisterFourBit
+add wave *
+run -all
+# === Start of Simulation ===
+# 1 ps: Clear failed
+# 261 ps: Clear failed
+# === End of Simulation ===
+# ** Note: $stop    : /home/nolan/Downloads/CounterTestbench.sv(152)
+#    Time: 270 ps  Iteration: 0  Instance: /CounterTestbench
+# Break in Module CounterTestbench at /home/nolan/Downloads/CounterTestbench.sv line 152
+quit -sim
+# End time: 15:02:45 on Apr 29,2025, Elapsed time: 0:03:46
+# Errors: 0, Warnings: 2
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv failed with 2 errors.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv was successful.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.CounterTestbench
+# vsim work.CounterTestbench 
+# Start time: 15:05:14 on Apr 29,2025
+# Loading sv_std.std
+# Loading work.CounterTestbench
+# Loading work.Counter
+# Loading work.RegisterFourBit
+add wave *
+run -all
+# === Start of Simulation ===
+# 1 ps: Clear failed
+# 261 ps: Clear failed
+# === End of Simulation ===
+# ** Note: $stop    : /home/nolan/Downloads/CounterTestbench.sv(152)
+#    Time: 270 ps  Iteration: 0  Instance: /CounterTestbench
+# Break in Module CounterTestbench at /home/nolan/Downloads/CounterTestbench.sv line 152
+quit -sim
+# End time: 15:12:14 on Apr 29,2025, Elapsed time: 0:07:00
+# Errors: 0, Warnings: 3
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv was successful.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.CounterTestbench
+# vsim work.CounterTestbench 
+# Start time: 15:12:43 on Apr 29,2025
+# Loading sv_std.std
+# Loading work.CounterTestbench
+# Loading work.Counter
+# Loading work.RegisterFourBit
+add wave *
+run -all
+# === Start of Simulation ===
+# 70 ps: Increment failed. addBy=1, expected=1, count=0
+# 80 ps: Increment failed. addBy=1, expected=1, count=0
+# 90 ps: Increment failed. addBy=1, expected=1, count=0
+# 100 ps: Increment failed. addBy=1, expected=1, count=0
+# 110 ps: Increment failed. addBy=1, expected=1, count=0
+# 120 ps: Increment failed. addBy=7, expected=7, count=0
+# 130 ps: Increment failed. addBy=7, expected=7, count=0
+# 140 ps: Increment failed. addBy=7, expected=7, count=0
+# 150 ps: Increment failed. addBy=7, expected=7, count=0
+# 160 ps: Increment failed. addBy=7, expected=7, count=0
+# 170 ps: Increment failed. addBy=8, expected=8, count=0
+# 180 ps: Increment failed. addBy=8, expected=8, count=0
+# 190 ps: Increment failed. addBy=8, expected=8, count=0
+# 200 ps: Increment failed. addBy=8, expected=8, count=0
+# 210 ps: Increment failed. addBy=8, expected=8, count=0
+# 220 ps: Increment failed. addBy=f, expected=f, count=0
+# 230 ps: Increment failed. addBy=f, expected=f, count=0
+# 240 ps: Increment failed. addBy=f, expected=f, count=0
+# 250 ps: Increment failed. addBy=f, expected=f, count=0
+# 260 ps: Increment failed. addBy=f, expected=f, count=0
+# === End of Simulation ===
+# ** Note: $stop    : /home/nolan/Downloads/CounterTestbench.sv(153)
+#    Time: 270 ps  Iteration: 0  Instance: /CounterTestbench
+# Break in Module CounterTestbench at /home/nolan/Downloads/CounterTestbench.sv line 153
+quit -sim
+# End time: 15:17:01 on Apr 29,2025, Elapsed time: 0:04:18
+# Errors: 0, Warnings: 2
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv was successful.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.CounterTestbench
+# vsim work.CounterTestbench 
+# Start time: 15:17:23 on Apr 29,2025
+# Loading sv_std.std
+# Loading work.CounterTestbench
+# Loading work.Counter
+# Loading work.RegisterFourBit
+add wave *
+run -all
+# === Start of Simulation ===
+# 1 ps: Clear failed
+# 261 ps: Clear failed
+# === End of Simulation ===
+# ** Note: $stop    : /home/nolan/Downloads/CounterTestbench.sv(152)
+#    Time: 270 ps  Iteration: 0  Instance: /CounterTestbench
+# Break in Module CounterTestbench at /home/nolan/Downloads/CounterTestbench.sv line 152
+quit -sim
+# End time: 15:20:29 on Apr 29,2025, Elapsed time: 0:03:06
+# Errors: 0, Warnings: 2
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv was successful.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.CounterTestbench
+# vsim work.CounterTestbench 
+# Start time: 15:20:54 on Apr 29,2025
+# Loading sv_std.std
+# Loading work.CounterTestbench
+# Loading work.Counter
+# Loading work.RegisterFourBit
+add wave *
+run -all
+# === Start of Simulation ===
+# 1 ps: Clear failed
+# 261 ps: Clear failed
+# === End of Simulation ===
+# ** Note: $stop    : /home/nolan/Downloads/CounterTestbench.sv(152)
+#    Time: 270 ps  Iteration: 0  Instance: /CounterTestbench
+# Break in Module CounterTestbench at /home/nolan/Downloads/CounterTestbench.sv line 152
+quit -sim
+# End time: 15:23:43 on Apr 29,2025, Elapsed time: 0:02:49
+# Errors: 0, Warnings: 2
+# Compile of Counter.sv was successful.
+# Compile of RegisterFourBit.sv was successful.
+# Compile of CounterTestbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.CounterTestbench
+# vsim work.CounterTestbench 
+# Start time: 15:24:03 on Apr 29,2025
+# Loading sv_std.std
+# Loading work.CounterTestbench
+# Loading work.Counter
+# Loading work.RegisterFourBit
+add wave *
+run -all
+# === Start of Simulation ===
+# === End of Simulation ===
+# ** Note: $stop    : /home/nolan/Downloads/CounterTestbench.sv(150)
+#    Time: 270 ps  Iteration: 0  Instance: /CounterTestbench
+# Break in Module CounterTestbench at /home/nolan/Downloads/CounterTestbench.sv line 150
+add wave *
+# End time: 11:58:27 on Apr 30,2025, Elapsed time: 20:34:24
+# Errors: 0, Warnings: 2

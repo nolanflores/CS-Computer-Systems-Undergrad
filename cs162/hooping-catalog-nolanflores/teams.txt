@@ -1,0 +1,23 @@
+4
+Thunder_Strikers John_Smith 5000000 5
+Alex_Johnson 28 USA 22.5 0.46
+Samantha_White 24 Canada 20.3 0.48
+Daniel_Brown 30 Australia 18.9 0.53
+Sophia_Davis 26 Spain 8.4 0.35
+Nathan_Turner 27 France 15.7 0.40
+Phoenix_Flames Sarah_Johnson 4500000 6
+James_Bryant 25 USA 38.3 0.44
+Olivia_Martinez 23 Brazil 16.7 0.42
+Liam_Wilson 29 England 21.2 0.50
+Daniel_Santos 28 Argentina 19.1 0.47
+Elena_Kovalenko 30 Russia 17.6 0.46
+Lucas_Silva 26 Portugal 5.9 0.43
+Blizzard_Bears Michael_Davis 6200000 3
+Ethan_Davis 31 USA 26.8 0.74
+Sophia_Anderson 27 Sweden 14.6 0.40
+Andreas_Larsson 29 Sweden 16.3 0.48
+Galaxy_Guardians David_Turner 5800000 4
+Marcus_Rodriguez 26 USA 23.7 0.51
+Sophia_Sanchez 24 Mexico 19.5 0.48
+Dame_Dolla 31 USA 32.1 0.54
+Sharp_Shooter 18 USA 12.6 0.99

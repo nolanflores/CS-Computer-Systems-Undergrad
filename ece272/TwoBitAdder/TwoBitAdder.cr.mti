@@ -1,0 +1,8 @@
+/home/nolan/school/ece272/TwoBitAdder/TwoBitAdder.v {1 {vlog -work work -stats=none /home/nolan/school/ece272/TwoBitAdder/TwoBitAdder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module TwoBitAdder
+
+Top level modules:
+	TwoBitAdder
+
+} {} {}}

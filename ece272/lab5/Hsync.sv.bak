@@ -1,0 +1,8 @@
+module Hsync(
+	input logic clk,
+	input logic reset_n,
+	input logic enable_n
+);
+
+
+endmodule;

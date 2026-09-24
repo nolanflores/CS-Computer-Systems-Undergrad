@@ -1,0 +1,6 @@
+module ColorDriver(
+	input logic [1:0] control,
+	input logic Hdisplay,
+	input logic Vdisplay,
+	output logic [3:0] display
+);

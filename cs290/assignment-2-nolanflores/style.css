@@ -1,0 +1,156 @@
+/*
+ * You should write your CSS in this file.  Don't forget to add your name and
+ * @oregonstate.edu email address below.
+ *
+ * name: Nolan Flores
+ * email: florenol@oregonstate.edu
+*/
+
+html body{
+    margin: 0;
+}
+
+header{
+    font-family: "Roboto Slab", "Roboto", sans-serif;
+    background-color: black;
+    display: flex;
+    align-items: end;
+}
+
+.header-image-container{
+    display: inline;
+}
+
+.site-title{
+    display: inline;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.site-title a{
+    color: white;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+.content{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+}
+
+.filter-container{
+    display: inline-block;
+    background-color: #efefef;
+    padding-inline: 20px;
+    padding-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 200px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.filter-input-container{
+    margin-bottom: 15px;
+    display: flex;
+}
+.filter-input-element{
+    flex: 1;
+    margin-left: 15px;
+}
+.filter-input{
+    width: 100%;
+}
+
+.filter-fieldset{
+    width: 100%;
+}
+
+.action-button{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.5em;
+    height: 2em;
+}
+.action-button:hover{
+    background-color: #f3d0b5;
+    color: black;
+    cursor: pointer;
+}
+
+#posts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.post{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    width: 500px;
+    height: 500px;
+}
+
+.post-contents{
+    width: auto;
+    height: auto;
+    padding: 15px;
+    align-items: center;
+}
+
+.post-image-container{
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.post-image-container img{
+    display: flex;
+    flex-grow: 1;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.post-info-container{
+    margin-top:20px;
+    line-height: 30px;
+}
+.post-title{
+    color: orangered;
+    text-decoration: none;
+}
+.post-title:hover{
+    text-decoration: underline;
+}
+.post-price{
+    background-color: #efefef;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 3px;
+}
+  
+
+
+#sell-something-button{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #e37115;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 30px;
+    border: none;
+    box-shadow: 1px 1px 4px 0px black;
+}
+#sell-something-button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

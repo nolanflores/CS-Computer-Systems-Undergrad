@@ -1,0 +1,7 @@
+module Mux(
+	input logic [1:0] r_in
+	//input logic []
+);
+
+
+endmodule

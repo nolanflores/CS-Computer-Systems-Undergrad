@@ -1,0 +1,22 @@
+@startuml
+
+class User {
+    - _user_id : str
+    - _name : str
+    - _email : str
+    - _planner : Planner
+
+    + add_workout_plan(plan : WorkoutPlan) : None
+    + get_plans() : list<WorkoutPlan>
+    + add_session(session : Session) : None
+    + get_sessions() : list<Session>
+    + update_profile(name : str, email : str) : None
+    + get_user_info() : dict
+    + get_planner() : Planner
+}
+
+User *-- Planner
+User ..> WorkoutPlan
+User ..> Session
+
+@enduml

@@ -1,0 +1,14 @@
+# ignoring python venv
+/bin/
+/include/
+/lib/
+/lib64
+/share
+/pip-selfcheck.json
+/pyvenv.cfg
+/images/
+/matplotlibrc
+/.vscode/
+/mifs/
+/mifData.mif
+/__pycache__/

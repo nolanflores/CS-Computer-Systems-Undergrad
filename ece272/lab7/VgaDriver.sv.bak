@@ -1,0 +1,68 @@
+module VgaDriver(
+	input logic clock,
+	input logic reset_n,
+	input logic [1:0] redControl,
+	input logic [1:0] greenControl,
+	input logic [1:0] blueControl,
+	output logic Hsync,
+	output logic Vsync,
+	//output logic Hdisplay,
+	//output logic Vdisplay,
+	output logic [3:0] redDisplay,
+	output logic [3:0] greenDisplay,
+	output logic [3:0] blueDisplay
+);
+
+logic Hdisplay;
+logic Vdisplay;
+
+logic enable_n;
+logic Hsync_clear;
+
+ToggleClock tc(
+	.clock(clock),
+	.reset_n,
+	.enable_n(enable_n)
+);
+
+Hsync hs(
+	.clock(clock),
+	.enable_n(enable_n),
+	.reset_n(reset_n),
+	.Hsync_clear(Hsync_clear),
+	.Hsync(Hsync),
+	.Hdisplay(Hdisplay)
+);
+
+Vsync vs(
+	.clock(clock),
+	.enable_n(enable_n),
+	.reset_n(reset_n),
+	.Hsync_clear(Hsync_clear),
+	.Vsync(Vsync),
+	.Vdisplay(Vdisplay)
+);
+
+ColorDriver red(
+	.control(redControl),
+	.Hdisplay(Hdisplay),
+	.Vdisplay(Vdisplay),
+	.display(redDisplay)
+);
+
+ColorDriver green(
+	.control(greenControl),
+	.Hdisplay(Hdisplay),
+	.Vdisplay(Vdisplay),
+	.display(greenDisplay)
+);
+
+ColorDriver blue(
+	.control(blueControl),
+	.Hdisplay(Hdisplay),
+	.Vdisplay(Vdisplay),
+	.display(blueDisplay)
+);
+
+
+endmodule

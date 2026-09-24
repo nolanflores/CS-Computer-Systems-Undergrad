@@ -1,0 +1,16 @@
+# Loading project SevenSegmentDecode
+# Compile of SevenSegmentDecode.sv was successful.
+# Compile of SevenSegmentTestbench.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.SevenSegmentTestbench
+# vsim work.SevenSegmentTestbench 
+# Start time: 15:58:46 on Apr 22,2025
+# Loading sv_std.std
+# Loading work.SevenSegmentTestbench
+# Loading work.SevenSegmentDecode
+add wave *
+run -all
+# ** Note: $stop    : /home/nolan/school/ece272/lab3b/SevenSegmentTestbench.sv(300)
+#    Time: 160 ps  Iteration: 0  Instance: /SevenSegmentTestbench
+# Break in Module SevenSegmentTestbench at /home/nolan/school/ece272/lab3b/SevenSegmentTestbench.sv line 300
+# ** Fatal: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.

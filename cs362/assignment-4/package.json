@@ -1,0 +1,16 @@
+{
+  "name": "assignment-4",
+  "version": "1.0.0",
+  "description": "End-to-end tests for a complete application",
+  "scripts": {
+    "start": "serve app",
+    "cy:open": "cypress open"
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^10.1.3",
+    "cypress": "^15.16.0"
+  }
+}

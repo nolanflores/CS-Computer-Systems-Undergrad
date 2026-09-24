@@ -1,0 +1,16 @@
+<main class="statsPage">
+    <h2 class="statsTitle">Player Statistics</h2>
+    <table>
+        <tr>
+            <th>Player</th>
+            <th>Hangman Wins</th>
+            <th>Hangman Losses</th>
+            <th>TicTacToe Games</th>
+            <th>Card Games</th>
+        </tr>
+        {{#each statistics}}
+            {{> playerStats}}
+        {{/each}}
+    </table>
+    <script src="/scripts/stats.js"></script>
+</main>

@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor "Registered User" as ru
+package "Instructional Information Delivery"{
+usecase "View Video" as UC1
+usecase "View in Fullscreen" as UC2
+usecase "Pause Video" as UC3
+usecase "Auto-Play Video" as UC4
+usecase "Auto-Loop Video Upon Ending" as UC5
+}
+
+ru -- UC1
+ru -- UC2
+ru -- UC3
+
+actor System as s
+s -- UC4
+s -- UC5
+
+(UC4) .> (UC1) : extend
+@enduml

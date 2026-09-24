@@ -1,0 +1,11 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Workout {
+  .. Public Attributes ..
+  + name: str
+  + sets: int
+  + reps: int
+  + rest_time: int
+}
+@enduml

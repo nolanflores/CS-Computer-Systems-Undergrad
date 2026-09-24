@@ -1,0 +1,6 @@
+@startuml
+class SuggestionEngine {
+  + suggest_rest_day(workoutplan: WorkoutPlan): str
+  + suggest_muscle_group(workoutplan: WorkoutPlan): str
+}
+@enduml

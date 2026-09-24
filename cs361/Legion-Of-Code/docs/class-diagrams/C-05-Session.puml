@@ -1,0 +1,25 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Session {
+  .. Private Attributes ..
+  - _id: int
+  - _day: str
+  - _notes: str
+  - _percieved_intensity: int
+  - _workout: Workout
+  .. Getters (@property) ..
+  + id(): int
+  + day(): str
+  + notes(): str
+  + percieved_intensity(): int
+  + workout(): Workout
+  .. Public Methods ..
+  + __init__()
+  + store_notes(notes: str): None
+  + track_id(id: int): None
+  + log_workout_day(day: str): None
+  + workout_intensity(intensity: int): None
+  + log_workout(workout: Workout): None
+}
+@enduml

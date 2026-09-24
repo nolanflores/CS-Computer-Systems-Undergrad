@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/nolan/intelFPGA_lite/21.1/modelsim_ase/bin
+vSevenSegmentDecode
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1745363195
+!i10b 1
+!s100 C`0kGOY:1ZI2;9o1:d`F50
+I[eDj[6^A[42M:>bRIbiB^2
+S1
+Z2 d/home/nolan/school/ece272/lab3b
+w1745363140
+8/home/nolan/school/ece272/lab3b/SevenSegmentDecode.sv
+F/home/nolan/school/ece272/lab3b/SevenSegmentDecode.sv
+!i122 2
+L0 27 50
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z5 !s108 1745363195.000000
+!s107 /home/nolan/school/ece272/lab3b/SevenSegmentDecode.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab3b/SevenSegmentDecode.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@seven@segment@decode
+vSevenSegmentTestbench
+R0
+R1
+!i10b 1
+!s100 FE1j`Uk88DW7O1n8`YOZX3
+IG8>kPE;F@CRNIVE]ZbM>00
+S1
+R2
+w1745362241
+8/home/nolan/school/ece272/lab3b/SevenSegmentTestbench.sv
+F/home/nolan/school/ece272/lab3b/SevenSegmentTestbench.sv
+!i122 3
+L0 22 282
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab3b/SevenSegmentTestbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab3b/SevenSegmentTestbench.sv|
+!i113 1
+R6
+R7
+n@seven@segment@testbench

@@ -1,0 +1,49 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+' Actors
+actor "Registered User" as User
+actor "System" as System
+
+' System Boundary
+rectangle "Basic Rule-Based Suggestions System" {
+  
+  ' Primary Use Cases
+  usecase "View Workout Suggestions" as UC1
+  usecase "Dismiss Suggestion" as UC2
+  
+  ' Supporting Use Cases
+  usecase "Generate Rest Day Reminder" as UC4
+  usecase "Generate Muscle Group Rotation Suggestion" as UC5
+  usecase "Generate Workout Consistency Notification" as UC6
+  
+  ' Backend Use Cases
+  usecase "Analyze Workout History" as UC7
+  usecase "Check Consecutive Workout Days" as UC8
+  usecase "Check Muscle Group Patterns" as UC9
+  usecase "Check Last Workout Date" as UC10
+  usecase "Apply Rule Logic" as UC11
+  
+  ' User Interactions
+  User -- UC1
+  User -- UC2
+  
+  ' System Interactions
+  System -- UC7
+  System -- UC11
+  System -- UC4
+  System -- UC5
+  System -- UC6
+  System -- UC8
+  System -- UC9
+  System -- UC10
+
+ 'Use Case Interactions
+ UC4 .> UC1 : <<extend>>
+ UC5 .> UC1 : <<extend>>
+ UC6 .> UC1 : <<extend>>
+
+
+}
+@enduml

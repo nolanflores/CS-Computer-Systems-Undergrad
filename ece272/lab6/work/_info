@@ -1,0 +1,211 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/nolan/intelFPGA_lite/21.1/modelsim_ase/bin
+vColorDriver
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1748975972
+!i10b 1
+!s100 WCPY6U2ec:Bh[mah0gH_z2
+I<H@<V?LJ_UjMLEcS;he<71
+S1
+Z2 d/home/nolan/school/ece272/lab6
+w1748630328
+8/home/nolan/school/ece272/lab6/ColorDriver.sv
+F/home/nolan/school/ece272/lab6/ColorDriver.sv
+!i122 410
+L0 1 26
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z5 !s108 1748975972.000000
+!s107 /home/nolan/school/ece272/lab6/ColorDriver.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab6/ColorDriver.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@color@driver
+vCounter
+R0
+R1
+!i10b 1
+!s100 h8iTKUDJ3jlKVI2MA1ij:0
+IJP2=lLXG?K_Bn07Y5de@50
+S1
+R2
+w1747818832
+8/home/nolan/school/ece272/lab5/Counter.sv
+F/home/nolan/school/ece272/lab5/Counter.sv
+!i122 406
+L0 1 20
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab5/Counter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab5/Counter.sv|
+!i113 1
+R6
+R7
+n@counter
+vHsync
+R0
+R1
+!i10b 1
+!s100 W_^7d3K>h^EibQ??Tf25W2
+I7_`P3oJijKd_MDaL^nXQC0
+S1
+R2
+w1748630478
+8/home/nolan/school/ece272/lab6/Hsync.sv
+F/home/nolan/school/ece272/lab6/Hsync.sv
+!i122 404
+L0 1 48
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab6/Hsync.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab6/Hsync.sv|
+!i113 1
+R6
+R7
+n@hsync
+vHsyncTestbench
+R0
+R1
+!i10b 1
+!s100 hnlBCY@6L<jnngbH6``D03
+IDIXRooaT?>PGMmORn2jFc0
+S1
+R2
+w1748628673
+8/home/nolan/school/ece272/lab6/HsyncTestbench.sv
+F/home/nolan/school/ece272/lab6/HsyncTestbench.sv
+!i122 405
+Z8 L0 1 66
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab6/HsyncTestbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab6/HsyncTestbench.sv|
+!i113 1
+R6
+R7
+n@hsync@testbench
+vToggleClock
+R0
+R1
+!i10b 1
+!s100 Zb3Dz`CXEChQY@@e1YlIk0
+I4LidZZig4kFli_=m2IAW[1
+S1
+R2
+w1748628074
+8/home/nolan/school/ece272/lab6/ToggleClock.sv
+F/home/nolan/school/ece272/lab6/ToggleClock.sv
+!i122 407
+L0 1 15
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab6/ToggleClock.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab6/ToggleClock.sv|
+!i113 1
+R6
+R7
+n@toggle@clock
+vVgaDriver
+R0
+R1
+!i10b 1
+!s100 SdVV<WZ03B5VT4XW@XoQ[1
+I9zYH]P>P<N?PSCLkWnAzF2
+S1
+R2
+w1748630528
+8/home/nolan/school/ece272/lab6/VgaDriver.sv
+F/home/nolan/school/ece272/lab6/VgaDriver.sv
+!i122 408
+R8
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab6/VgaDriver.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab6/VgaDriver.sv|
+!i113 1
+R6
+R7
+n@vga@driver
+vVgaTestbench
+R0
+!s110 1748975973
+!i10b 1
+!s100 ?`mYfk>:Dk:?i7?=R>fQT2
+ID;77DI7_lznH3[1lDNGLL1
+S1
+R2
+w1748975967
+8/home/nolan/Downloads/VgaTestbench.sv
+F/home/nolan/Downloads/VgaTestbench.sv
+!i122 411
+L0 30 229
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/Downloads/VgaTestbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/Downloads/VgaTestbench.sv|
+!i113 1
+R6
+R7
+n@vga@testbench
+vVsync
+R0
+R1
+!i10b 1
+!s100 =1CnfSkY?Vl>1fePX]R]42
+IlYWlZ;oB6ATY:`2;QIk_>3
+S1
+R2
+w1748630141
+8/home/nolan/school/ece272/lab6/Vsync.sv
+F/home/nolan/school/ece272/lab6/Vsync.sv
+!i122 409
+L0 1 51
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/nolan/school/ece272/lab6/Vsync.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/nolan/school/ece272/lab6/Vsync.sv|
+!i113 1
+R6
+R7
+n@vsync

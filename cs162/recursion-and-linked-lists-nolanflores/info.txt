@@ -1,0 +1,47 @@
+Nolan Flores 934525801
+
+Recursion:
+    make
+    ./test
+Linked List:
+    make
+    make test_double
+    ./test
+    ./test_double
+
+Extra Credit:
+    For the linked list, I completed both extra credits.
+
+    I removed linked_list.cpp, and implemented linked_list
+    as a template class in linked_list.hpp. I then copied
+    and modified test.cpp into test_double.cpp.
+
+    I implemented the recursive selection sort for the
+    descending sort. It is a private method that is
+    initially called from the public sort_descending() method.
+    The intial call provides the list head as the only argument,
+    and each recursive call provides the next node to be sorted
+    as it's argument. It was a real headache to wrap my head around.
+
+Runtime Complexity:
+    sort_ascending():
+        It's a recursive merge sort with a complexity of O(n*log(n)).
+        If the list is longer than 1, it is divided into halves. Those
+        halves are then recursively cut in half over and over, until the
+        sublists have a length of 1 or 0. Then each of the small halves
+        of 1 or 0 are put back togther in a sorted order, resulting in
+        small sorted lists, this happens recursively until all of the
+        smaller sorted lists are recombined back into a large sorted list.
+        The splitting takes O(log(n)) time, and the sorting takes O(n) time,
+        resulting in a complecity of O(n*log(n)).
+    sort_descending():
+        It's a recursive selection sort with a complexity of O(n^2).
+        The algorithm is passed the head of a list. It then loops
+        through all of the nodes after the head to find the node with
+        the largest value. It then swaps the head node with the node
+        with the largest value. It then recursively calls itself, passing
+        the next node as the argument, essentially passing a list with
+        one less length. This goes until the recursive calls reach the end
+        of the list, and the pointer to the head of the list is returned.
+        The method is called n times, and each call loops through the list,
+        meaning it has a complexity of O(n^2).

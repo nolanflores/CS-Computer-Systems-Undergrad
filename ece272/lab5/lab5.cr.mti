@@ -1,0 +1,15 @@
+/home/nolan/school/ece272/lab5/ClockTestbench.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab5/ClockTestbench.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module ClockTestbench
+
+Top level modules:
+	ClockTestbench
+
+} {} {}} /home/nolan/school/ece272/lab5/Counter.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab5/Counter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module Counter
+
+Top level modules:
+	Counter
+
+} {} {}}

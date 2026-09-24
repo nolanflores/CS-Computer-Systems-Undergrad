@@ -1,0 +1,17 @@
+describe('3*33=99; old->modern', () => {
+    it('convert old roman numerals to modern', () => {
+        cy.visit('/')
+        cy.findByTestId("roman-mode-display").should("have.text", "old")
+        cy.contains("3").click()
+        cy.findByTestId("key-multiply").click()
+        cy.findByTestId("text-display").should("have.text", "III")
+        cy.contains("3").click()
+        cy.contains("3").click()
+        cy.findByTestId("text-display").should("have.text", "XXXIII")
+        cy.findByTestId("key-equals").click()
+        cy.findByTestId("text-display").should("have.text", "LXXXXVIIII")
+        cy.contains("mdrn").click()
+        cy.findByTestId("roman-mode-display").should("have.text", "modern")
+        cy.findByTestId("text-display").should("have.text", "XCIX")
+    })
+})

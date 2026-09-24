@@ -1,0 +1,16 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Planner {
+   -plans: list
+   -logs: list
+   -workouts: list
+   --
+   +add_plan(plan: WorkoutPlan)
+   +remove_plan(id: int) : bool
+   +list_plans() : list
+   +log_workout(session: Session)
+   +edit_log(id: int, new_sess: Session)
+   +get_logs(): list
+}
+@enduml

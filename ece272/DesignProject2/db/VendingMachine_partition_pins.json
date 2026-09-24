@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "vend",
+					"strict" : false
+				},
+				{
+					"name" : "nickel_out",
+					"strict" : false
+				},
+				{
+					"name" : "dime_out",
+					"strict" : false
+				},
+				{
+					"name" : "quarter_out",
+					"strict" : false
+				},
+				{
+					"name" : "refund",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "quarter",
+					"strict" : false
+				},
+				{
+					"name" : "dime",
+					"strict" : false
+				},
+				{
+					"name" : "nickel",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

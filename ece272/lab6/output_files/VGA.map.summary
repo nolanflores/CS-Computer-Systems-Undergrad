@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Tue Jun  3 14:40:50 2025
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : VGA
+Top-level Entity Name : VgaDriver
+Family : MAX 10
+Total logic elements : 58
+    Total combinational functions : 58
+    Dedicated logic registers : 25
+Total registers : 25
+Total pins : 22
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

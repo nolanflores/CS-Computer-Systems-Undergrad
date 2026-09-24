@@ -1,0 +1,210 @@
+@startuml overallClassDiagram
+left to right direction
+
+package "Workout Planning & Tracking System"{
+    class User {
+        - _user_id : str
+        - _name : str
+        - _email : str
+        - _planner : Planner
+
+        + add_workout_plan(plan : WorkoutPlan) : None
+        + get_plans() : list<WorkoutPlan>
+        + add_session(session : Session) : None
+        + get_sessions() : list<Session>
+        + update_profile(name : str, email : str) : None
+        + get_user_info() : dict
+        + get_planner() : Planner
+    }
+    class Planner {
+        -plans: list
+        -logs: list
+        -workouts: list
+        --
+        +add_plan(plan: WorkoutPlan)
+        +remove_plan(id: int) : bool
+        +list_plans() : list
+        +log_workout(session: Session)
+        +edit_log(id: int, new_sess: Session)
+        +get_logs(): list
+    }
+    class Viewer {
+        .. Private Attributes ..
+        - _window : tk.Tk
+        - _user : User
+        - _planner: Planner
+        - _pageContent : ttk.Frame
+        .. Public Methods ..
+        + __init__()
+        + start() : None
+        + main_loop() : None
+        + main_menu() : None
+        + create_plan(): None
+        + view_plans(): None
+        + log_workout(): None
+        + view_logs(): None
+        + view_suggestion(): None
+        + view_statistics(): None
+        + edit_plan(): None
+        + set_user(user: User): None
+        .. Private Methods ..
+        - _handle_login(): None
+    }
+    class CreatePlanDialog {
+        .. Public Attributes ..
+        + window : tk.Toplevel
+        .. Private Attributes ..
+        - _planner : Planner
+        - _plan : WorkoutPlan
+        - _picker : ExercisePickerFrame
+        - _day_var : tk.StringVar
+        - _summary : tk.Text
+        .. Private Methods ..
+        - _add() : None
+        - _save() : None
+    }
+    class LogWorkoutDialog {
+        .. Public Attributes ..
+        + window : tk.Toplevel
+        .. Private Attributes ..
+        - _planner : Planner
+        - _picker : ExercisePickerFrame
+        - _day_var : tk.StringVar
+        - _notes : ttk.Entry
+        - _intensity : tk.IntVar
+        .. Private Methods ..
+        - _log() : None
+    }
+    class EditPlanDialog {
+        .. Public Attributes ..
+        + window : tk.Toplevel
+        .. Private Attributes ..
+        - _planner : Planner
+        - _plans : list
+        - _picker : ExercisePickerFrame
+        - _day_var : tk.StringVar
+        - _action : tk.StringVar
+        .. Private Methods ..
+        - _apply() : None
+    }
+    class ExercisePickerFrame {
+        .. Public Attributes ..
+        + frame : ttk.LabelFrame
+        .. Private Attributes ..
+        - _exercises : dict
+        - _listbox : tk.Listbox
+        .. Public Methods ..
+        + get_workout() : Workout | None
+    }
+    class WorkoutPlan {
+        .. Public Attributes ..
+        + id: int
+        + workout_plan: dict[str, Workout]
+        + last_rest_day: str
+        + current_streak: int
+        .. Public Methods ..
+        + __init__()
+        + workout_plan_empty(): bool
+        + add_workout(day: str, workout: Workout): bool
+        + remove_workout(day: str): bool
+        + update_workout(day: str, workout: Workout): bool
+        + calculate_rest_day(): date
+    }
+    class Session {
+        .. Private Attributes ..
+        - _id: int
+        - _day: str
+        - _notes: str
+        - _percieved_intensity: int
+        - _workout: Workout
+        .. Getters (@property) ..
+        + id(): int
+        + day(): str
+        + notes(): str
+        + percieved_intensity(): int
+        + workout(): Workout
+        .. Public Methods ..
+        + __init__()
+        + store_notes(notes: str): None
+        + track_id(id: int): None
+        + log_workout_day(day: str): None
+        + workout_intensity(intensity: int): None
+        + log_workout(workout: Workout): None
+    }
+    class Workout {
+        .. Public Attributes ..
+        + name: str
+        + sets: int
+        + reps: int
+        + rest_time: int
+    }
+    class SuggestionEngine {
+        + suggest_rest_day(workoutplan: WorkoutPlan): str
+        + suggest_muscle_group(workoutplan: WorkoutPlan): str
+    }
+    class ProgressAnalyzer {
+        .. Public Attributes ..
+        +sessions : list
+
+        .. Public Methods ..
+        +improvement_insights() : list
+        +generate_report() : dict
+
+        .. Private Attributes ..
+        - _stats : dict
+        - _date_range : tuple
+
+        .. Private Methods ..
+        - _calculate_stats() : dict
+        - _weekly_stats(weeks: int = 4) : list
+    }
+
+    User -down-* WorkoutPlan
+    User -down-- Session
+    User -down-- Viewer
+
+    Planner -- WorkoutPlan
+    Planner -- Session
+    Planner ..> Viewer
+
+    Viewer -- WorkoutPlan
+    Viewer -- Session
+    Viewer -- Workout
+    Viewer ..> SuggestionEngine
+
+    WorkoutPlan o-- Workout
+    Session -- WorkoutPlan
+    Session o-- Workout
+
+    ProgressAnalyzer ..> Viewer
+    ProgressAnalyzer ..> Session
+    ProgressAnalyzer ..> WorkoutPlan
+
+    SuggestionEngine ..> WorkoutPlan
+    SuggestionEngine ..> Session
+
+
+
+    Viewer *--> Planner
+    Viewer --> User
+    Viewer ..> SuggestionEngine
+    Viewer ..> ProgressAnalyzer
+    Viewer ..> CreatePlanDialog
+    Viewer ..> LogWorkoutDialog
+    Viewer ..> EditPlanDialog
+
+
+    CreatePlanDialog --> Planner
+    CreatePlanDialog --> WorkoutPlan
+    CreatePlanDialog *--> ExercisePickerFrame
+
+    LogWorkoutDialog --> Planner
+    LogWorkoutDialog --> Session
+    LogWorkoutDialog *--> ExercisePickerFrame
+
+    EditPlanDialog --> Planner
+    EditPlanDialog *--> ExercisePickerFrame
+
+    ExercisePickerFrame ..> Workout
+}
+@enduml

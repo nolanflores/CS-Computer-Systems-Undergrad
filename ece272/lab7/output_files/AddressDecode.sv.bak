@@ -1,0 +1,5 @@
+module AddressDecode(
+	input logic row,
+	input logic column,
+	output logic [15:0] pixel_address
+);

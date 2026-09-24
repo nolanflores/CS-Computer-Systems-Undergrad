@@ -1,0 +1,57 @@
+/home/nolan/school/ece272/lab6/Hsync.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab6/Hsync.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module Hsync
+
+Top level modules:
+	Hsync
+
+} {} {}} /home/nolan/school/ece272/lab6/HsyncTestbench.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab6/HsyncTestbench.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module HsyncTestbench
+
+Top level modules:
+	HsyncTestbench
+
+} {} {}} /home/nolan/Downloads/VgaTestbench.sv {1 {vlog -work work -sv -stats=none /home/nolan/Downloads/VgaTestbench.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module VgaTestbench
+
+Top level modules:
+	VgaTestbench
+
+} {} {}} /home/nolan/school/ece272/lab6/ToggleClock.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab6/ToggleClock.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module ToggleClock
+
+Top level modules:
+	ToggleClock
+
+} {} {}} /home/nolan/school/ece272/lab6/VgaDriver.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab6/VgaDriver.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module VgaDriver
+
+Top level modules:
+	VgaDriver
+
+} {} {}} /home/nolan/school/ece272/lab5/Counter.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab5/Counter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module Counter
+
+Top level modules:
+	Counter
+
+} {} {}} /home/nolan/school/ece272/lab6/Vsync.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab6/Vsync.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module Vsync
+
+Top level modules:
+	Vsync
+
+} {} {}} /home/nolan/school/ece272/lab6/ColorDriver.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab6/ColorDriver.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module ColorDriver
+
+Top level modules:
+	ColorDriver
+
+} {} {}}

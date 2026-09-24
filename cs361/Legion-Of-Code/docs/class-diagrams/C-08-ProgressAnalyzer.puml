@@ -1,0 +1,20 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class ProgressAnalyzer {
+  .. Public Attributes ..
+  +sessions : list
+
+  .. Public Methods ..
+  +improvement_insights() : list
+  +generate_report() : dict
+
+  .. Private Attributes ..
+  -_stats : dict
+  -_date_range : tuple
+
+  .. Private Methods ..
+  -_calculate_stats() : dict
+  -_weekly_stats(weeks: int = 4) : list
+}
+@enduml

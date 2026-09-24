@@ -1,0 +1,8 @@
+/home/nolan/school/ece272/lab3b/SevenSegmentDecode.sv {1 {vlog -work work -sv -stats=none /home/nolan/school/ece272/lab3b/SevenSegmentDecode.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  2 2021
+-- Compiling module SevenSegmentDecode
+
+Top level modules:
+	SevenSegmentDecode
+
+} {} {}}

@@ -1,0 +1,31 @@
+# Loading project TwoBitAdder
+# Compile of TwoBitAdder.v failed with 1 errors.
+# Compile of TwoBitAdder.v failed with 3 errors.
+# Compile of TwoBitAdder.v failed with 1 errors.
+# Compile of TwoBitAdder.v failed with 1 errors.
+# Compile of TwoBitAdder.v failed with 5 errors.
+# Compile of TwoBitAdder.v failed with 3 errors.
+# Compile of TwoBitAdder.v was successful.
+# Compile of TwoBitAdder.v failed with 2 errors.
+# Compile of TwoBitAdder.v failed with 1 errors.
+# Compile of TwoBitAdder.v was successful.
+do TwoBitAdder.do
+# ** Error: No Design Loaded!
+# Error in macro ./TwoBitAdder.do line 2
+# No Design Loaded!
+#     while executing
+# "restartCmd -force -nowave"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval restartCmd $args"
+#     (procedure "restart" line 18)
+#     invoked from within
+# "restart -force -nowave"
+vsim work.TwoBitAdder
+# vsim work.TwoBitAdder 
+# Start time: 09:39:11 on Apr 17,2025
+# Loading work.TwoBitAdder
+do TwoBitAdder.do
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# End time: 09:44:30 on Apr 17,2025, Elapsed time: 0:05:19
+# Errors: 0, Warnings: 1

@@ -1,0 +1,35 @@
+@startuml
+
+|User|
+start
+:Login;
+:Open workout dashboard;
+:Select existing workout plan;
+:Click "Start Workout" button;
+
+|System|
+:Show list of exercises in workout;
+
+|User|
+:Click on an exercise;
+
+|System|
+:Show exercise page;
+
+|User|
+:Enter number of sets done for that workout;
+:Enter number of reps at which weight for each set;
+
+|System|
+:Check if number of reps and amount of weight is reasonable;
+if (Reps and weight is reasonable) then (Yes)
+:Store number of sets, reps, and the weight the user did;
+else (No)
+:Display error message;
+endif
+
+|User|
+:Click "Complete Exercise" button;
+stop
+
+@enduml
