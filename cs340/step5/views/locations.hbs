@@ -1,0 +1,104 @@
+
+   <main>
+        <section class="page-title">
+            <p class="eyebrow">Entity page</p>
+            <h1>Locations</h1>
+            <p>
+                Browse & manage store locations.
+            </p>
+        </section>
+        <section class="panel">
+            <div class="table-wrap">
+                {{! READ table }}
+                {{#if headers.length}}
+                    <table>
+                        <thead>
+                            <tr>
+                                {{#each headers}}
+                                    <th> {{ this }} </th>
+                                {{/each}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each locData}}
+                                <tr>
+                                    {{#each this}}
+                                        <td>{{ this }}</td>
+                                    {{/each}}
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                {{else}}
+                    <p>No data found.</p>
+                {{/if}}
+            </div>
+        </section>
+        <section class="grid">
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Add Locations</h2>
+                    <span>INSERT draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Locations">
+                    <input type="hidden" name="operation" value="add">
+                    <div class="form-grid">
+                        <label for="add-locAddress">
+                            Address
+                            <input id="add-locAddress" name="locAddress" type="text" required>
+                        </label>
+                        <label for="add-locPhone">
+                            Phone Number
+                            <input id="add-locPhone" name="locPhone" type="text" required>
+                        </label>
+                    </div>
+                    <button type="submit">Add Location</button>
+                </form>
+            </article>
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Update Locations</h2>
+                    <span>Update draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Locations">
+                    <input type="hidden" name="operation" value="add">
+                    <div class="form-grid">
+                        <label for="get-locID">
+                            Location ID
+                            <input id="locID-to-update" name="locID" type="text" required>
+                        </label>
+                        <label for="update-locAddress">
+                            Address
+                            <input id="update-locAddress" name="locAddress" type="text" required>
+                        </label>
+                        <label for="update-locPhone">
+                            Phone Number
+                            <input id="update-locPhone" name="jobTitle" type="text" required>
+                        </label>
+                    </div>
+                    <button type="submit">Update Location</button>
+                </form>
+            </article>
+        </section>
+        <section class="panel">
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Delete Locations</h2>
+                    <span>DELETE draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Locations">
+                    <input type="hidden" name="operation" value="delete">
+                    <div class="form-grid">
+                        <label for="delete-locationID">
+                            Location ID
+                            <input id="delete" name="locationID" type="number" required>
+                        </label>
+                    </div>
+                    <button type="submit">Delete Location</button>
+                </form>
+            </article>
+        </section>
+    </main>

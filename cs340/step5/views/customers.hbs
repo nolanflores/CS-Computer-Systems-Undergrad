@@ -1,0 +1,116 @@
+
+    <main>
+        <section class="page-title">
+            <p class="eyebrow">Entity page</p>
+            <h1>Customers</h1>
+            <p>
+                Browse & manage customer records.
+            </p>
+        </section>
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Browse Customers</h2>
+                <span>SELECT draft</span>
+            </div>
+        <div class="table-wrap">
+            {{! READ table }}
+            {{#if headers.length}}
+                <table>
+                    <thead>
+                        <tr>
+                            {{#each headers}}
+                                <th> {{ this }} </th>
+                            {{/each}}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each custData}}
+                            <tr>
+                                {{#each this}}
+                                    <td>{{ this }}</td>
+                                {{/each}}
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{else}}
+                <p>No data found.</p>
+            {{/if}}
+        </div>
+        </section>
+        <section class="grid">
+            <article class="panel">
+                <div class="panel">
+                    <h2>Add Customers</h2>
+                    <span>INSERT draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Customers">
+                    <input type="hidden" name="operation" value="add">
+                    <div class="form-grid">
+                        <label for="add-customerName">
+                            Customer Name
+                            <input id="add-customerName" name="customerName" type="text" required>
+                        </label>
+                        <label for="add-customerEmail">
+                            Customer Email
+                            <input id="add-customerEmail" name="customerEmail" type="text" required>
+                        </label>
+                        <label for="add-phoneNumber">
+                            Phone Number
+                            <input id="add-phoneNumber" name="phoneNumber" type="text" required>
+                        </label>
+                    </div>
+                    <button type="submit">Add Customer</button>
+                </form>
+            </article>
+            <article class="panel">
+                <div class="panel">
+                    <h2>Update Customers</h2>
+                    <span>UPDATE draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Customers">
+                    <input type="hidden" name="operation" value="update">
+                    <div class="form-grid">
+                        <label for="custID">
+                            Customer ID
+                            <input id="custID-to-update" name="custID" type="number">
+                        </label>
+                        <label for="update-customerName">
+                            Customer Name
+                            <input id="update-customerName" name="customerName" type="text">
+                        </label>
+                        <label for="update-customerEmail">
+                            Customer Email
+                            <input id="update-customerEmail" name="customerEmail" type="text">
+                        </label>
+                        <label for="update-phoneNumber">
+                            Phone Number
+                            <input id="update-phoneNumber" name="phoneNumber" type="text">
+                        </label>
+                    </div>
+                    <button type="submit">Update Customer</button>
+                </form>
+            </article>
+        </section>
+        <section class="panel">
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Delete Customers</h2>
+                    <span>DELETE draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Customers">
+                    <input type="hidden" name="operation" value="delete">
+                    <div class="form-grid">
+                        <label for="delete-customerID">
+                            Customer ID
+                            <input id="delete" name="customerID" type="number" required>
+                        </label>
+                    </div>
+                    <button type="submit">Delete Customer</button>
+                </form>
+            </article>
+        </section>
+    </main>

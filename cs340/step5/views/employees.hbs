@@ -1,0 +1,147 @@
+
+    <main>
+        <section class="page-title">
+            <p class="eyebrow">Entity page</p>
+            <h1>Employees</h1>
+            <p>
+                Browse & manage employee records.
+            </p>
+        </section>
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Browse Employees</h2>
+                <span>SELECT draft</span>
+            </div>
+        <div class="table-wrap">
+            {{! READ table }}
+            {{#if headers.length}}
+                <table>
+                    <thead>
+                        <tr>
+                            {{#each headers}}
+                                <th> {{ this }} </th>
+                            {{/each}}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each empData}}
+                            <tr>
+                                {{#each this}}
+                                    <td>{{ this }}</td>
+                                {{/each}}
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{else}}
+                <p>No data found.</p>
+            {{/if}}
+        </div>
+        </section>
+        <section class="grid">
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Add Employees</h2>
+                    <span>INSERT draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Employees">
+                    <input type="hidden" name="operation" value="add">
+                    <div class="form-grid">
+                        <label for="add-empName">
+                            Name
+                            <input id="add-empName" name="empName" type="text" required>
+                        </label>
+                        <label for="add-roleID">
+                            Role ID
+                            <input id="add-roleID" name="roleID" type="number" required>
+                        </label>
+                        <label for="add-locationID">
+                            Location ID
+                            <input id="add-locationID" name="locationID" type="number" required>
+                        </label>
+                        <label for="add-phoneNumber">
+                            Phone Number
+                            <input id="add-phoneNumber" name="phoneNumber" type="text" required>
+                        </label>
+                        <label for="add-empEmail">
+                            E-mail
+                            <input id="add-empEmail" name="empEmail" type="text" required>
+                        </label>
+                        <label for="add-isTeacher">
+                            is_teacher
+                            <input id="add-isTeacher" name="isTeacher" type="text" required>
+                        </label>
+                        <label for="add-empInstrument">
+                            Instrument
+                            <input id="add-empInstrument" name="empInstrument" type="text" required>
+                        </label>
+                    </div>
+                    <button type="submit">Add Employee</button>
+                </form>
+            </article>
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Update Employees</h2>
+                    <span>UPDATE draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Employees">
+                    <input type="hidden" name="operation" value="update">
+                    <div class="form-grid">
+                        <label for="empIDUpdate">
+                            Employee ID
+                            <input id="empID-to-update" name="empID" type="number" required>
+                        <label for="update-empName"></label>
+                            Name
+                            <input id="update-empName" name="empName" type="text" required>
+                        </label>
+                        <label for="update-roleID">
+                            Role ID
+                            <input id="update-roleID" name="roleID" type="number" required>
+                        </label>
+                        <label for="update-locationID">
+                            Location ID
+                            <input id="update-locationID" name="locationID" type="number" required>
+                        </label>
+                        <label for="update-phoneNumber">
+                            Phone Number
+                            <input id="update-phoneNumber" name="phoneNumber" type="text" required>
+                        </label>
+                        <label for="update-empEmail">
+                            E-mail
+                            <input id="update-empEmail" name="empEmail" type="text" required>
+                        </label>
+                        <label for="update-isTeacher">
+                            is_teacher
+                            <input id="update-isTeacher" name="isTeacher" type="text" required>
+                        </label>
+                        <label for="update-empInstrument">
+                            Instrument
+                            <input id="update-empInstrument" name="empInstrument" type="text" required>
+                        </label>
+                    </div>
+                    <button type="submit">Update Employee</button>
+                </form>
+            </article>
+        </section>
+        <section class="panel">
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Delete Employee</h2>
+                    <span>DELETE draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Employee">
+                    <input type="hidden" name="operation" value="delete">
+                    <div class="form-grid">
+                        <label for="delete-employeeID">
+                            Employee ID
+                            <input id="delete-employeeID" name="employeeID" type="number" required>
+                        </label>
+                    </div>
+                    <button type="submit">Delete Employee</button>
+                </form>
+            </article>
+        </section>
+    </main>

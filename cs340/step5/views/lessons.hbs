@@ -1,0 +1,132 @@
+
+<main>
+    <section class="page-title">
+        <p class="eyebrow">Entity page</p>
+        <h1>Lessons</h1>
+        <p>
+            Browse & manage lessons.
+        </p>
+    </section>
+    <section class="panel">
+        <div class="section-heading">
+            <h2>Browse Lessons</h2>
+            <span>SELECT draft</span>
+        </div>
+        <div class="table-wrap">
+            {{! READ table }}
+            {{#if headers.length}}
+                <table>
+                    <thead>
+                        <tr>
+                            {{#each headers}}
+                                <th> {{ this }} </th>
+                            {{/each}}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each lessonData}}
+                            <tr>
+                                {{#each this}}
+                                    <td>{{ this }}</td>
+                                {{/each}}
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{else}}
+                <p>No data found.</p>
+            {{/if}}
+        </div>
+    </section>
+    <section class="grid">
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Add Lessons</h2>
+                <span>INSERT draft</span>
+            </div>
+            <form method="post" action="/draft-action">
+                <input type="hidden" name="entity" value="Lessons">
+                <input type="hidden" name="operation" value="add">
+                <div class="form-grid">
+                    <label for="add-customerID">
+                        Customer ID
+                        <input id="add-customerID" name="customerID" type="number" required>
+                    </label>
+                    <label for="add-employeeID">
+                        Employee ID
+                        <input id="add-employeeID" name="employeeID" type="number" required>
+                    </label>
+                    <label for="add-lessonRate">
+                        Rate
+                        <input id="add-lessonRate" name="lessonRate" type="number" required>
+                    </label>
+                    <label for="add-lessonInst">
+                        Instrument
+                        <input id="add-lessonInst" name="lessonInst" type="text" required>
+                    </label>
+                    <label for="add-locationID">
+                        Location ID
+                        <input id="add-locationID" name="locationID" type="number" required>
+                    </label>
+                </div>
+                <button type="submit">Add Lesson</button>
+            </form>
+        </article>
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Update Lessons</h2>
+                <span>Update draft</span>
+            </div>
+            <form method="post" action="/update-lesson">
+                <input type="hidden" name="entity" value="Lessons">
+                <input type="hidden" name="operation" value="update">
+                <div class="form-grid">
+                    <label for="update-customerID">
+                        Customer ID
+                        <input id="update-customerID" name="customerID" type="number" required>
+                    </label>
+                    <label for="update-employeeID">
+                        Employee ID
+                        <input id="update-employeeID" name="employeeID" type="number" required>
+                    </label>
+                    <label for="update-lessonRate">
+                        Rate
+                        <input id="update-lessonRate" name="lessonRate" type="number" required>
+                    </label>
+                    <label for="update-lessonInst">
+                        Instrument
+                        <input id="update-lessonInst" name="lessonInst" type="text" required>
+                    </label>
+                    <label for="update-locationID">
+                        Location ID
+                        <input id="update-locationID" name="locationID" type="number" required>
+                    </label>
+                </div>
+                <button type="submit">Update Lesson</button>
+            </form>
+        </article>
+    </section>
+    <section class="panel">
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Delete Lessons</h2>
+                <span>DELETE draft</span>
+            </div>
+            <form method="post" action="/delete-lesson">
+                <input type="hidden" name="entity" value="Locations">
+                <input type="hidden" name="operation" value="delete">
+                <div class="form-grid">
+                    <label for="delete-customerID">
+                        Customer ID
+                        <input id="delete-customerID" name="customerID" type="number" required>
+                    </label>
+                    <label for="delete-employeeID">
+                        Employee ID
+                        <input id="delete-employeeID" name="employeeID" type="number" required>
+                    </label>
+                </div>
+                <button type="submit">Delete Lessons</button>
+            </form>
+        </article>
+    </section>
+</main>

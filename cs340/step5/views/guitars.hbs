@@ -1,0 +1,140 @@
+
+    <main>
+        <section class="page-title">
+            <p class="eyebrow">Entity page</p>
+            <h1>Guitars</h1>
+            <p>
+                Browse & manage guitar inventory.
+            </p>
+        </section>
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Browse Guitars</h2>
+                <span>SELECT draft</span>
+            </div>
+            <div class="table-wrap">
+                {{! READ table }}
+                {{#if headers.length}}
+                    <table>
+                        <thead>
+                            <tr>
+                                {{#each headers}}
+                                    <th> {{ this }} </th>
+                                {{/each}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each guitarData}}
+                                <tr>
+                                    {{#each this}}
+                                        <td>{{ this }}</td>
+                                    {{/each}}
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                {{else}}
+                    <p>No data found.</p>
+                {{/if}}
+            </div>
+        </section>
+        <section class="grid">
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Add Guitars</h2>
+                    <span>INSERT draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Guitars">
+                    <input type="hidden" name="operation" value="add">
+                    <div class="form-grid">
+                        <label for="add-guitarYear">
+                            Year
+                            <input id="add-guitarYear" name="guitarYear" type="number" required>
+                        </label>
+                        <label for="add-guitarPrice">
+                            Price
+                            <input id="add-guitarPrice" name="guitarPrice" type="number" required>
+                        </label>
+                        <label for="add-guitarBrand">
+                            Brand
+                            <input id="add-guitarBrand" name="guitarBrand" type="text" required>
+                        </label>
+                        <label for="add-guitarModel">
+                            Model
+                            <input id="add-guitarModel" name="guitarModel" type="text" required>
+                        </label>
+                        <label for="add-guitarCon">
+                            Condition
+                            <input id="add-guitarCon" name="guitarCon" type="text" required>
+                        </label>
+                        <label for="add-serialNum">
+                            Serial Number
+                            <input id="add-serialNum" name="serialNum" type="text" required>
+                        </label>
+                    </div>
+                    <button type="submit">Add Guitar</button>
+                </form>
+            </article>
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Update Guitars</h2>
+                    <span>UPDATE draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Guitars">
+                    <input type="hidden" name="operation" value="update">
+                    <div class="form-grid">
+                        <label for="guitarID">
+                            Guitar ID
+                            <input id="guitarID-to-update" name="guitarID" type="number">
+                        </label>
+                        <label for="update-guitarYear">
+                            Year
+                            <input id="update-guitarYear" name="guitarYear" type="number">
+                        </label>
+                        <label for="update-guitarPrice">
+                            Price
+                            <input id="update-guitarPrice" name="guitarPrice" type="number">
+                        </label>
+                        <label for="update-guitarBrand">
+                            Brand
+                            <input id="update-guitarBrand" name="guitarBrand" type="text">
+                        </label>
+                        <label for="update-guitarModel">
+                            Model
+                            <input id="update-guitarModel" name="guitarModel" type="text">
+                        </label>
+                        <label for="update-guitarCon">
+                            Condition
+                            <input id="update-guitarCon" name="guitarCon" type="text">
+                        </label>
+                        <label for="update-serialNum">
+                            Serial Number
+                            <input id="update-serialNum" name="serialNum" type="text">
+                        </label>
+                    </div>
+                    <button type="submit">Update Guitar</button>
+                </form>
+            </article>
+        </section>
+        <section class="panel">
+            <article class="panel">
+                <div class="section-heading">
+                    <h2>Delete Guitars</h2>
+                    <span>DELETE draft</span>
+                </div>
+                <form method="post" action="/draft-action">
+                    <input type="hidden" name="entity" value="Guitars">
+                    <input type="hidden" name="operation" value="delete">
+                    <div class="form-grid">
+                        <label for="delete-productID">
+                            Product ID
+                            <input id="delete-productID" name="productID" type="number" required>
+                        </label>
+                    </div>
+                    <button type="submit">Delete Guitar</button>
+                </form>
+            </article>
+        </section>
+    </main>

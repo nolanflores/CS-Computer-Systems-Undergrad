@@ -1,0 +1,135 @@
+<main>
+    <section class="page-title">
+        <p class="eyebrow">Entity page</p>
+        <h1>Sales</h1>
+        <p>
+            Browse & manage sales records.
+        </p>
+    </section>
+    <section class="panel">
+        <div class="section-heading">
+            <h2>Browse Sales</h2>
+            <span>SELECT</span>
+        </div>
+        <div class="table-wrap">
+            {{! READ table }}
+            {{#if headers.length}}
+                <table>
+                    <thead>
+                        <tr>
+                            {{#each headers}}
+                                <th> {{ this }} </th>
+                            {{/each}}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each salesData}}
+                            <tr>
+                                {{#each this}}
+                                    <td>{{ this }}</td>
+                                {{/each}}
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{else}}
+                <p>No data found.</p>
+            {{/if}}
+        </div>
+    </section>
+    <section class="grid">
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Add Sales</h2>
+                <span>INSERT draft</span>
+            </div>
+            <form method="post" action="/insert-sale">
+                <input type="hidden" name="entity" value="Sales">
+                <input type="hidden" name="operation" value="add">
+                <div class="form-grid">
+                    <label for="add-customerID">
+                        Customer ID
+                        <input id="add-customerID" name="customerID" type="number" required>
+                    </label>
+                    <label for="add-employeeID">
+                        Employee ID
+                        <input id="add-employeeID" name="employeeID" type="number" required>
+                    </label>
+                    <label for="add-productID">
+                        Product ID
+                        <input id="add-productID" name="productID" type="number" required>
+                    </label>
+                    <label for="add-locationID">
+                        Location ID
+                        <input id="add-locationID" name="locationID" type="number" required>
+                    </label>
+                    <label for="add-saleDate">
+                        Date of Sale
+                        <input id="add-saleDate" name="saleDate" type="date" required>
+                    </label>
+                    <label for="add-amount">
+                        Sale Amount
+                        <input id="add-amount" name="amount" type="number" required>
+                    </label>
+                </div>
+                <button type="submit">Add Sale</button>
+            </form>
+        </article>
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Update Sales</h2>
+                <span>UPDATE draft</span>
+            </div>
+            <form method="post" action="/update">
+                <input type="hidden" name="entity" value="Sales">
+                <input type="hidden" name="operation" value="update">
+                <div class="form-grid">
+                    <label for="update-customerID">
+                        Customer ID
+                        <input id="update-customerID" name="customerID" type="number" required>
+                    </label>
+                    <label for="update-employeeID">
+                        Employee ID
+                        <input id="update-employeeID" name="employeeID" type="number" required>
+                    </label>
+                    <label for="update-productID">
+                        Product ID
+                        <input id="update-productID" name="productID" type="number" required>
+                    </label>
+                    <label for="update-locationID">
+                        Location ID
+                        <input id="update-locationID" name="locationID" type="number" required>
+                    </label>
+                    <label for="update-saleDate">
+                        Date of Sale
+                        <input id="update-saleDate" name="saleDate" type="date" required>
+                    </label>
+                    <label for="update-amount">
+                        Sale Amount
+                        <input id="update-amount" name="amount" type="number" required>
+                    </label>
+                </div>
+                <button type="submit">Update Sale</button>
+            </form>
+        </article>
+    </section>
+    <section class="panel">
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Delete Sales</h2>
+                <span>DELETE draft</span>
+            </div>
+            <form method="post" action="/delete">
+                <input type="hidden" name="entity" value="Sales">
+                <input type="hidden" name="operation" value="delete">
+                <div class="form-grid">
+                    <label for="delete-transactionID">
+                        Transaction ID
+                        <input id="delete" name="transactionID" type="number" required>
+                    </label>
+                </div>
+                <button type="submit">Delete Sale</button>
+            </form>
+        </article>
+    </section>
+</main>

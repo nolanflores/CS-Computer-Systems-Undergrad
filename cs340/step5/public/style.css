@@ -1,0 +1,285 @@
+        :root {
+            --bg: #eef1f6;
+            --panel: #ffffff;
+            --ink: #172026;
+            --muted: #5b5e6d;
+            --line: #cad5d8;
+            --accent: #2f6f4f;
+            --accent-dark: #1f2c4f;
+            --header: #e7ebef;
+            --warm: #3584a8;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-size: 16px;
+            font-family: Helvetica, sans-serif;
+            line-height: 1.45;
+        }
+
+        .site-header {
+            align-items: center;
+            background: var(--panel);
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            gap: 18px;
+            justify-content: space-between;
+            min-height: 62px;
+            padding: 10px clamp(16px, 3vw, 34px);
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        .brand {
+            color: var(--accent-dark);
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            font-size: 1rem;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+
+        nav a,
+        .button-link,
+        button {
+            background: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            font: inherit;
+            font-weight: 700;
+            padding: 8px 11px;
+            text-decoration: none;
+        }
+
+        nav a {
+            border: 1px solid transparent;
+            border-radius: 6px;
+            background: transparent;
+            color: var(--accent-dark);
+            font-size: 0.93rem;
+            padding: 6px 8px;
+        }
+
+        nav a:hover,
+        .button-link:hover,
+        button:hover {
+            border-color: var(--accent-dark);
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background: var(--header);
+            border-color: var(--line);
+            color: var(--accent-dark);
+        }
+
+        main {
+            margin: 0 auto;
+            max-width: 1180px;
+            padding: 26px clamp(14px, 3vw, 34px) 40px;
+        }
+
+        .hero,
+        .page-title,
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            margin: 0 0 18px;
+            padding: 20px;
+        }
+
+        .hero {
+            min-height: auto;
+        }
+
+        .hero h1,
+        .page-title h1 {
+            color: var(--ink);
+            font-size: clamp(1.8rem, 4vw, 2.3rem);
+            line-height: 1.1;
+            margin: 2px 0 5px;
+            text-align: left;
+        }
+
+        .hero p {
+            margin: 5px 0 5px 2px;
+        }
+
+        .eyebrow,
+        .section-heading span {
+            color: var(--warm);
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            margin: 0 0 10px 2px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: var(--ink);
+            font-size: 1.18rem;
+            margin: 0;
+            text-align: left;
+        }
+
+        .panel h2 {
+            margin: 5px 0 5px 2px;
+        }
+
+        p {
+            color: var(--muted);
+            margin: 0 0 12px;
+        }
+
+        .section-heading {
+            align-items: center;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            gap: 12px;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+        }
+
+        .page-list {
+            display: grid;
+            gap: 10px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page-list li {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .page-list a {
+            color: var(--accent-dark);
+            display: block;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .page-list span {
+            color: var(--muted);
+            display: block;
+            margin-top: 4px;
+        }
+
+        .table-wrap {
+            margin-top: 10px;
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+            min-width: 760px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--line);
+            color: var(--ink);
+            padding: 9px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: var(--header);
+            font-size: 0.88rem;
+        }
+
+        td {
+            background: var(--panel);
+            font-size: 0.92rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            padding: 0 6px;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        label {
+            color: var(--ink);
+            display: grid;
+            gap: 5px;
+            font-weight: 700;
+        }
+
+        input,
+        select,
+        textarea {
+            background: #ffffff;
+            border: 1px solid #b9c2bd;
+            border-radius: 6px;
+            color: var(--ink);
+            min-height: 40px;
+            padding: 8px 9px;
+        }
+
+        textarea {
+            min-height: 70px;
+        }
+
+        button,
+        .button-link {
+            background: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 6px;
+            color: #ffffff;
+            margin-top: 14px;
+            padding: 8px 12px;
+        }
+
+        .form-note {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin: 12px 0 0;
+        }
+
+        @media (max-width: 780px) {
+        .site-header {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        nav {
+            justify-content: flex-start;
+        }
+
+        .grid,
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .section-heading {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>Seasick Steves Guitar Emporium Data Entry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/">S.S Steve's Guitar Emporium DB</a>
+        <nav aria-label="Navigation">
+            <a id="resetDb">RESET DATABASE</a>
+            <script>
+                const button = document.getElementById('resetDb');
+
+                button.addEventListener('click', async () => {
+                    try {
+                        button.textContent = "Reseting database...";
+
+                        // 3. Send a request to your Express server
+                        const response = await fetch('/api/reset-db', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' }
+                        });
+
+                        const result = await response.json();
+
+                    } catch (error) {
+                        console.error('Error fetching data:', error);
+                    } finally {
+                        location.reload();
+                        button.textContent = "RESET DATABASE"; // Reset button text
+                        console.log("Database reset successfully");
+                    }
+                });
+            </script>
+            <a href="/sales">Sales</a>
+            <a href="/guitars">Guitars</a>
+            <a href="/employees">Employees</a>
+            <a href="/lessons">Lessons</a>
+            <a href="/locations">Locations</a>
+            <a href="/customers">Customers</a>
+            <a href="/roles">Roles</a>
+        </nav>
+    </header>
+
+    {{{body}}}
+
+</body>
+</html>

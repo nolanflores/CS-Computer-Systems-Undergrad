@@ -1,0 +1,107 @@
+<main>
+    <section class="page-title">
+        <p class="eyebrow">Entity page</p>
+        <h1>Roles</h1>
+        <p>
+            Browse & manage employee roles.
+        </p>
+    </section>
+    <section class="panel">
+        <div class="section-heading">
+            <h2>Browse Roles</h2>
+            <span>SELECT draft</span>
+        </div>
+        <div class="table-wrap">
+            {{! READ table }}
+            {{#if headers.length}}
+                <table>
+                    <thead>
+                        <tr>
+                            {{#each headers}}
+                                <th> {{ this }} </th>
+                            {{/each}}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each roleData}}
+                            <tr>
+                                {{#each this}}
+                                    <td>{{ this }}</td>
+                                {{/each}}
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{else}}
+                <p>No data found.</p>
+            {{/if}}
+        </div>
+    </section>
+    <section class="grid">
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Add Roles</h2>
+                <span>INSERT draft</span>
+            </div>
+            <form method="post" action="/draft-action">
+                <input type="hidden" name="entity" value="Roles">
+                <input type="hidden" name="operation" value="add">
+                <div class="form-grid">
+                    <label for="add-payRate">
+                        Pay Rate
+                        <input id="add-payRate" name="payRate" type="number" required>
+                    </label>
+                    <label for="add-jobTitle">
+                        Job Title
+                        <input id="add-jobTitle" name="jobTitle" type="text" required>
+                    </label>
+                </div>
+                <button type="submit">Add Role</button>
+            </form>
+        </article>
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Update Roles</h2>
+                <span>Update draft</span>
+            </div>
+            <form method="post" action="/draft-action">
+                <input type="hidden" name="entity" value="Roles">
+                <input type="hidden" name="operation" value="update">
+                <div class="form-grid">
+                    <label for="update-roleID">
+                        Role ID
+                        <input id="roleID-to-update" name="roleID" type="number" required>
+                    </label>
+                    <label for="update-payRate">
+                        Pay Rate
+                        <input id="update-payRate" name="payRate" type="number" required>
+                    </label>
+                    <label for="update-jobTitle">
+                        Job Title
+                        <input id="update-jobTitle" name="jobTitle" type="text" required>
+                    </label>
+                </div>
+                <button type="submit">Update Role</button>
+            </form>
+        </article>
+    </section>
+    <section class="panel">
+        <article class="panel">
+            <div class="section-heading">
+                <h2>Delete Roles</h2>
+                <span>DELETE draft</span>
+            </div>
+            <form method="post" action="/draft-action">
+                <input type="hidden" name="entity" value="Roles">
+                <input type="hidden" name="operation" value="delete">
+                <div class="form-grid">
+                    <label for="delete-roleID">
+                        Role ID
+                        <input id="delete" name="roleID" type="number" required>
+                    </label>
+                </div>
+                <button type="submit">Delete Role</button>
+            </form>
+        </article>
+    </section>
+</main>
